@@ -1,0 +1,47 @@
+@use './mixins';
+@use './typography';
+@use './variables' as *;
+@use './global';
+
+.header{
+    background-color: $color-primary;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1rem;
+    width: 100%;
+
+  
+    &__logo{
+        height: 1.25rem;
+        width: 7.5rem;
+    } 
+
+    &__navbar{
+        width: 100%;     
+    }
+
+    &__navlist{
+            list-style: none;
+            display: flex;
+            justify-content: space-evenly;
+            margin: 0;
+    }
+
+    &__items {
+            text-decoration: none;
+            color: $color-secondary;
+            display: flex;    
+            padding: 1rem;  
+            
+            &:hover{
+                background-color: $color-quaternary;
+            }
+
+            &--active {
+                border-bottom: 0.5rem solid $color-secondary; 
+            }
+    }
+
+
+}

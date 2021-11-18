@@ -17,4 +17,70 @@ body {
 @font-face {
   font-family: "avenir-demi";
   src: url(../../assets/fonts/font_woff_files/AvenirNextLTPro-Demi.woff2) format("woff2");
+}
+li {
+  font-family: avenir;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
+
+.header {
+  background-color: #323232;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1rem;
+  width: 100%;
+}
+.header__logo {
+  height: 1.25rem;
+  width: 7.5rem;
+}
+.header__navbar {
+  width: 100%;
+}
+.header__navlist {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0;
+}
+.header__items {
+  text-decoration: none;
+  color: #ffffff;
+  display: flex;
+  padding: 1rem;
+}
+.header__items:hover {
+  background-color: #000000;
+}
+.header__items--active {
+  border-bottom: 0.5rem solid #ffffff;
+}
+
+.hero {
+  background-image: url(../../assets/images/hero-bio.jpg);
+  background-position: center;
+  background-size: cover;
+  margin: 0;
+  height: 25vh;
+  display: flex;
+  align-items: center;
+}
+.hero__text {
+  margin: 3rem;
+  color: white;
+  padding: 2rem;
+  align-items: center;
 }/*# sourceMappingURL=bio.css.map */

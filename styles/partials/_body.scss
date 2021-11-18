@@ -1,0 +1,24 @@
+@use './mixins';
+@use './typography';
+@use './variables';
+@use './global';
+
+.hero{
+    background-image: url(../../assets/images/hero-bio.jpg);
+    background-position: center;
+    background-size: cover;
+    margin: 0;
+    height: 25vh;
+    display: flex;
+    align-items: center;
+
+    &__text {
+        margin: 3rem;
+        color: white;
+        padding: 2rem;
+        align-items: center;
+    }
+
+
+
+}
