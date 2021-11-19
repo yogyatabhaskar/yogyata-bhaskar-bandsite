@@ -1,4 +1,4 @@
-@use './mixins';
+@use './mixins' as *;
 @use './typography';
 @use './variables' as *;
 @use './global';
@@ -6,29 +6,56 @@
 .header{
     background-color: $color-primary;
     padding: 1rem 1rem 1rem 0;
-    width: 100%;
 
   
     &__logo{
-        height: 1.25rem;
+        height: 2.25rem;
         width: 7.5rem;
     } 
 
     &__navbar{
         display: flex;
-        flex-direction: column;
         align-items: center;
+        flex-direction: column;
         width: 100%; 
-        justify-content: center;    
+        justify-content: center; 
+        
+        @include tablet{
+            flex-direction: row;
+           
+        }
+        @include desktop{
+            flex-direction: row;
+            padding: 0 36px;
+        }
+    }
+
+    &__link {
+        @include tablet {
+            padding: 0 2.25rem;
+        }
+        @include desktop{
+            padding: 0 36px;
+        }
     }
 
     &__navlist{
         width: 100%;
         display: flex;
         list-style: none;
-        margin-bottom: 0;
+        margin: 0;
         padding: 0;
         justify-content: space-between;
+
+        @include tablet{
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+        @include desktop{
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+        
     }
     
 
@@ -37,6 +64,14 @@
         color: $color-secondary;
         text-decoration: none;
         padding: 0 2rem 1rem 2rem; 
+        
+        @include tablet{
+            padding: 0 1rem 1.5rem 1rem
+        }
+
+        @include desktop{
+            padding: 0 1rem 1.5rem 1rem
+        }
 
         &:hover{
             background-color: $color-quaternary;

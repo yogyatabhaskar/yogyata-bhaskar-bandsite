@@ -1,31 +1,36 @@
-@use './mixins';
+@use './mixins' as *;
 @use './typography';
 @use './variables' as *;
 @use './global';
 
 .hero{
+    display: flex;
+    align-items: center;
     background-image: url(../../assets/images/hero-bio.jpg);
     background-position: center;
     background-size: cover;
     margin: 0;
-    height: 35vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
+    height: 25vh;
+
+    @include tablet {
+        height: 30vh;
+    }
+    @include desktop {
+        height: 65vh;
+    }
 
     &__text {
         margin: 2rem;
         color: white;
         align-items: center;
+
+        @include desktop {
+            padding: 0 2rem;   
+        }
     }
 }
 
 .main{
-    display: flex;
-    flex-direction: column;
-}
-
-.information{
     display: flex;
     flex-direction: column;
 
@@ -33,12 +38,32 @@
         padding: 1.5rem 1rem 1rem 1rem;
         margin: 0;
 
+        @include tablet{
+            padding: 2.5rem 3.5rem 0 3.5rem;
+        }
+
+        @include desktop {
+            padding: 2.5rem 3.5rem 0 3.5rem;   
+        }
     }
+}
+
+.information{
+    display: flex;
+    flex-direction: column;
+
+    @include tablet {
+        padding: 2rem 5rem;
+    }
+    @include desktop {
+       margin: 0 1rem;
+        padding: 2rem 6rem;
+    }
+    
 
     &__img {
         object-fit: cover;
-        width: 100%;
-        height: 38vh;
+        height: 40vh;
         padding: 0 1rem;
     } 
 
@@ -46,6 +71,14 @@
         font-size: .875rem;
         padding: 1rem;
         margin: 0;
+
+        @include tablet {
+             font-size: 1.5rem;
+        }
+
+        @include desktop{
+            font-size: 1.5rem;
+        }
     }
 
     &__musician{
@@ -58,25 +91,74 @@
         margin: 1rem 0 0 0;
     }
 
+    &__para{
+        @include tablet{
+           
+            display: flex;
+        }
+        @include desktop{
+           
+            display: flex;
+        }
+        
+
+    } 
+
     &__para1, &__para2 {
         margin: 0;
         padding: 1rem;
+        @include tablet{
+            font-size: .875rem;
+        }
+        @include desktop{
+            font-size: .875rem;
+        }
     }
 
 }
 
 .gallery {
-    background-color: $color-senary;   
+    background-color: $color-senary; 
+    
 
     &__heading {
         padding: 1rem;
         margin: 0;
+        @include tablet {
+            padding: 2.5rem 3.5rem 0 3.5rem;;
+        }
+        @include desktop {
+            padding: 2.5rem 3.5rem 0 3.5rem;
+        }
     }
 
+    &__images{
+        display: flex;  
+        flex-direction: column;
+
+        @include tablet {
+            flex-flow: row wrap;
+            padding: 2.5rem 3.5rem;
+        }
+        @include desktop {
+            flex-flow: row wrap;
+            padding: 2.5rem 3.5rem;
+        }
+    }
     &__img {
-        width: 100%;
-        height: 22vh;
+        object-fit: cover;
+        height: 35vh;
         padding: 0 1rem 1rem 1rem;
+        
+        @include tablet {
+            width: 33%;
+            height: 18vh;
+            
+        }
+        @include desktop {
+            width: 33%;
+            height: 24vh;
+        }
 
     }
 

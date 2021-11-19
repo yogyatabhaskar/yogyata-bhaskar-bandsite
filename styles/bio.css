@@ -19,10 +19,21 @@ body {
   src: url(../../assets/fonts/font_woff_files/AvenirNextLTPro-Demi.woff2) format("woff2");
 }
 h1 {
-  font-family: avenir;
+  font-family: avenir-bold;
   font-size: 1.5rem;
   line-height: 2rem;
-  font-weight: 700;
+}
+@media (min-width: 48rem) {
+  h1 {
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+  }
+}
+@media (min-width: 80rem) {
+  h1 {
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+  }
 }
 
 h2 {
@@ -30,11 +41,53 @@ h2 {
   font-size: 1.5rem;
   line-height: 2rem;
 }
+@media (min-width: 48rem) {
+  h2 {
+    font-size: 2.25rem;
+    line-height: 2rem;
+  }
+}
+@media (min-width: 80rem) {
+  h2 {
+    font-size: 2.25rem;
+    line-height: 2rem;
+  }
+}
 
 h3 {
   font-family: avenir-demi;
   font-size: 0.875rem;
   line-height: 1.375rem;
+}
+@media (min-width: 48rem) {
+  h3 {
+    font-size: 24px;
+    line-height: 2rem;
+  }
+}
+@media (min-width: 80rem) {
+  h3 {
+    font-size: 24px;
+    line-height: 2rem;
+  }
+}
+
+h4 {
+  font-family: avenir-demi;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+}
+@media (min-width: 48rem) {
+  h4 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+@media (min-width: 80rem) {
+  h4 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
 }
 
 li {
@@ -42,42 +95,108 @@ li {
   font-size: 0.875rem;
   line-height: 1.375rem;
 }
+@media (min-width: 48rem) {
+  li {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+@media (min-width: 80rem) {
+  li {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
 
 p {
   font-family: avenir;
   font-size: 0.8125rem;
   line-height: 2rem;
 }
+@media (min-width: 48rem) {
+  p {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
+}
+@media (min-width: 80rem) {
+  p {
+    font-size: 1.5rem;
+    line-height: 1.375rem;
+  }
+}
 
 .header {
   background-color: #323232;
   padding: 1rem 1rem 1rem 0;
-  width: 100%;
 }
 .header__logo {
-  height: 1.25rem;
+  height: 2.25rem;
   width: 7.5rem;
 }
 .header__navbar {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
   width: 100%;
   justify-content: center;
+}
+@media (min-width: 48rem) {
+  .header__navbar {
+    flex-direction: row;
+  }
+}
+@media (min-width: 80rem) {
+  .header__navbar {
+    flex-direction: row;
+    padding: 0 36px;
+  }
+}
+@media (min-width: 48rem) {
+  .header__link {
+    padding: 0 2.25rem;
+  }
+}
+@media (min-width: 80rem) {
+  .header__link {
+    padding: 0 36px;
+  }
 }
 .header__navlist {
   width: 100%;
   display: flex;
   list-style: none;
-  margin-bottom: 0;
+  margin: 0;
   padding: 0;
   justify-content: space-between;
+}
+@media (min-width: 48rem) {
+  .header__navlist {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+@media (min-width: 80rem) {
+  .header__navlist {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
 }
 .header__items {
   text-decoration: none;
   color: #ffffff;
   text-decoration: none;
   padding: 0 2rem 1rem 2rem;
+}
+@media (min-width: 48rem) {
+  .header__items {
+    padding: 0 1rem 1.5rem 1rem;
+  }
+}
+@media (min-width: 80rem) {
+  .header__items {
+    padding: 0 1rem 1.5rem 1rem;
+  }
 }
 .header__items:hover {
   background-color: #000000;
@@ -87,9 +206,51 @@ p {
 }
 
 .footer {
+  display: flex;
+  flex-direction: column;
   background-color: #323232;
   color: #ffffff;
   padding: 1rem;
+}
+@media (min-width: 48rem) {
+  .footer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 2rem 4rem;
+  }
+}
+@media (min-width: 80rem) {
+  .footer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 2rem 5rem;
+  }
+}
+@media (min-width: 48rem) {
+  .footer__info {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+@media (min-width: 80rem) {
+  .footer__info {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+@media (min-width: 48rem) {
+  .footer__title {
+    margin-right: 4rem;
+    padding-right: 4rem;
+  }
+}
+@media (min-width: 80rem) {
+  .footer__title {
+    margin-right: 4rem;
+    padding-right: 4rem;
+  }
 }
 .footer__social {
   display: flex;
@@ -97,13 +258,46 @@ p {
   height: 1.25rem;
   width: 7.5rem;
 }
+@media (min-width: 48rem) {
+  .footer__social {
+    padding: 2rem;
+    width: 12.5rem;
+  }
+}
+@media (min-width: 80rem) {
+  .footer__social {
+    padding: 1rem;
+    width: 12.5rem;
+  }
+}
 .footer__connect {
   padding-bottom: 2rem;
   margin-bottom: 1rem;
 }
+@media (min-width: 48rem) {
+  .footer__connect {
+    display: flex;
+  }
+}
+@media (min-width: 80rem) {
+  .footer__connect {
+    display: flex;
+  }
+}
+@media (min-width: 48rem) {
+  .footer__associates {
+    padding: 1rem;
+  }
+}
+@media (min-width: 80rem) {
+  .footer__associates {
+    padding: 1rem;
+  }
+}
 .footer__list {
   list-style: none;
   padding-left: 0;
+  min-width: 0;
 }
 .footer__address {
   font-family: avenir;
@@ -114,47 +308,114 @@ p {
   height: 1.25rem;
   width: 7.5rem;
 }
+@media (min-width: 48rem) {
+  .footer__icon {
+    padding-top: 2rem;
+    width: 20%;
+  }
+}
+@media (min-width: 80rem) {
+  .footer__icon {
+    width: 20%;
+  }
+}
+@media (min-width: 48rem) {
+  .footer__person, .footer__address, .footer__id {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+@media (min-width: 80rem) {
+  .footer__person, .footer__address, .footer__id {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
 
 .hero {
+  display: flex;
+  align-items: center;
   background-image: url(../../assets/images/hero-bio.jpg);
   background-position: center;
   background-size: cover;
   margin: 0;
-  height: 35vh;
-  width: 100%;
-  display: flex;
-  align-items: center;
+  height: 25vh;
+}
+@media (min-width: 48rem) {
+  .hero {
+    height: 30vh;
+  }
+}
+@media (min-width: 80rem) {
+  .hero {
+    height: 65vh;
+  }
 }
 .hero__text {
   margin: 2rem;
   color: white;
   align-items: center;
 }
+@media (min-width: 80rem) {
+  .hero__text {
+    padding: 0 2rem;
+  }
+}
 
 .main {
   display: flex;
   flex-direction: column;
+}
+.main__title {
+  padding: 1.5rem 1rem 1rem 1rem;
+  margin: 0;
+}
+@media (min-width: 48rem) {
+  .main__title {
+    padding: 2.5rem 3.5rem 0 3.5rem;
+  }
+}
+@media (min-width: 80rem) {
+  .main__title {
+    padding: 2.5rem 3.5rem 0 3.5rem;
+  }
 }
 
 .information {
   display: flex;
   flex-direction: column;
 }
-.information__title {
-  padding: 1.5rem 1rem 1rem 1rem;
-  margin: 0;
+@media (min-width: 48rem) {
+  .information {
+    padding: 2rem 5rem;
+  }
+}
+@media (min-width: 80rem) {
+  .information {
+    margin: 0 1rem;
+    padding: 2rem 6rem;
+  }
 }
 .information__img {
   -o-object-fit: cover;
      object-fit: cover;
-  width: 100%;
-  height: 38vh;
+  height: 40vh;
   padding: 0 1rem;
 }
 .information__words {
   font-size: 0.875rem;
   padding: 1rem;
   margin: 0;
+}
+@media (min-width: 48rem) {
+  .information__words {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 80rem) {
+  .information__words {
+    font-size: 1.5rem;
+  }
 }
 .information__musician {
   padding: 0 1rem 1rem 1rem;
@@ -164,9 +425,29 @@ p {
   padding: 0 1rem;
   margin: 1rem 0 0 0;
 }
+@media (min-width: 48rem) {
+  .information__para {
+    display: flex;
+  }
+}
+@media (min-width: 80rem) {
+  .information__para {
+    display: flex;
+  }
+}
 .information__para1, .information__para2 {
   margin: 0;
   padding: 1rem;
+}
+@media (min-width: 48rem) {
+  .information__para1, .information__para2 {
+    font-size: 0.875rem;
+  }
+}
+@media (min-width: 80rem) {
+  .information__para1, .information__para2 {
+    font-size: 0.875rem;
+  }
 }
 
 .gallery {
@@ -176,8 +457,47 @@ p {
   padding: 1rem;
   margin: 0;
 }
+@media (min-width: 48rem) {
+  .gallery__heading {
+    padding: 2.5rem 3.5rem 0 3.5rem;
+  }
+}
+@media (min-width: 80rem) {
+  .gallery__heading {
+    padding: 2.5rem 3.5rem 0 3.5rem;
+  }
+}
+.gallery__images {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 48rem) {
+  .gallery__images {
+    flex-flow: row wrap;
+    padding: 2.5rem 3.5rem;
+  }
+}
+@media (min-width: 80rem) {
+  .gallery__images {
+    flex-flow: row wrap;
+    padding: 2.5rem 3.5rem;
+  }
+}
 .gallery__img {
-  width: 100%;
-  height: 22vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 35vh;
   padding: 0 1rem 1rem 1rem;
+}
+@media (min-width: 48rem) {
+  .gallery__img {
+    width: 33%;
+    height: 18vh;
+  }
+}
+@media (min-width: 80rem) {
+  .gallery__img {
+    width: 33%;
+    height: 24vh;
+  }
 }/*# sourceMappingURL=bio.css.map */
