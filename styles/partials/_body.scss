@@ -1,6 +1,6 @@
 @use './mixins';
 @use './typography';
-@use './variables';
+@use './variables' as *;
 @use './global';
 
 .hero{
@@ -8,17 +8,76 @@
     background-position: center;
     background-size: cover;
     margin: 0;
-    height: 25vh;
+    height: 35vh;
+    width: 100%;
     display: flex;
     align-items: center;
 
     &__text {
-        margin: 3rem;
+        margin: 2rem;
         color: white;
-        padding: 2rem;
         align-items: center;
     }
+}
 
+.main{
+    display: flex;
+    flex-direction: column;
+}
 
+.information{
+    display: flex;
+    flex-direction: column;
+
+    &__title{
+        padding: 1.5rem 1rem 1rem 1rem;
+        margin: 0;
+
+    }
+
+    &__img {
+        object-fit: cover;
+        width: 100%;
+        height: 38vh;
+        padding: 0 1rem;
+    } 
+
+    &__words {
+        font-size: .875rem;
+        padding: 1rem;
+        margin: 0;
+    }
+
+    &__musician{
+        padding:0 1rem 1rem 1rem;
+        margin: 0;
+    }
+
+    &__bandname{
+        padding: 0 1rem;
+        margin: 1rem 0 0 0;
+    }
+
+    &__para1, &__para2 {
+        margin: 0;
+        padding: 1rem;
+    }
+
+}
+
+.gallery {
+    background-color: $color-senary;   
+
+    &__heading {
+        padding: 1rem;
+        margin: 0;
+    }
+
+    &__img {
+        width: 100%;
+        height: 22vh;
+        padding: 0 1rem 1rem 1rem;
+
+    }
 
 }

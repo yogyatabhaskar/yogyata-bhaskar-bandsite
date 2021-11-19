@@ -18,29 +18,40 @@ body {
   font-family: "avenir-demi";
   src: url(../../assets/fonts/font_woff_files/AvenirNextLTPro-Demi.woff2) format("woff2");
 }
-li {
-  font-family: avenir;
-  font-weight: 600;
-}
-
 h1 {
+  font-family: avenir;
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 700;
 }
 
 h2 {
+  font-family: avenir-bold;
   font-size: 1.5rem;
   line-height: 2rem;
-  font-weight: 700;
+}
+
+h3 {
+  font-family: avenir-demi;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+}
+
+li {
+  font-family: avenir-demi;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+}
+
+p {
+  font-family: avenir;
+  font-size: 0.8125rem;
+  line-height: 2rem;
 }
 
 .header {
   background-color: #323232;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 1rem;
+  padding: 1rem 1rem 1rem 0;
   width: 100%;
 }
 .header__logo {
@@ -48,25 +59,60 @@ h2 {
   width: 7.5rem;
 }
 .header__navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
+  justify-content: center;
 }
 .header__navlist {
-  list-style: none;
+  width: 100%;
   display: flex;
-  justify-content: space-evenly;
-  margin: 0;
+  list-style: none;
+  margin-bottom: 0;
+  padding: 0;
+  justify-content: space-between;
 }
 .header__items {
   text-decoration: none;
   color: #ffffff;
-  display: flex;
-  padding: 1rem;
+  text-decoration: none;
+  padding: 0 2rem 1rem 2rem;
 }
 .header__items:hover {
   background-color: #000000;
 }
 .header__items--active {
-  border-bottom: 0.5rem solid #ffffff;
+  border-bottom: 0.25rem solid #ffffff;
+}
+
+.footer {
+  background-color: #323232;
+  color: #ffffff;
+  padding: 1rem;
+}
+.footer__social {
+  display: flex;
+  justify-content: space-between;
+  height: 1.25rem;
+  width: 7.5rem;
+}
+.footer__connect {
+  padding-bottom: 2rem;
+  margin-bottom: 1rem;
+}
+.footer__list {
+  list-style: none;
+  padding-left: 0;
+}
+.footer__address {
+  font-family: avenir;
+  font-weight: 400;
+  font-size: 0.8125rem;
+}
+.footer__icon {
+  height: 1.25rem;
+  width: 7.5rem;
 }
 
 .hero {
@@ -74,13 +120,64 @@ h2 {
   background-position: center;
   background-size: cover;
   margin: 0;
-  height: 25vh;
+  height: 35vh;
+  width: 100%;
   display: flex;
   align-items: center;
 }
 .hero__text {
-  margin: 3rem;
+  margin: 2rem;
   color: white;
-  padding: 2rem;
   align-items: center;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.information {
+  display: flex;
+  flex-direction: column;
+}
+.information__title {
+  padding: 1.5rem 1rem 1rem 1rem;
+  margin: 0;
+}
+.information__img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 38vh;
+  padding: 0 1rem;
+}
+.information__words {
+  font-size: 0.875rem;
+  padding: 1rem;
+  margin: 0;
+}
+.information__musician {
+  padding: 0 1rem 1rem 1rem;
+  margin: 0;
+}
+.information__bandname {
+  padding: 0 1rem;
+  margin: 1rem 0 0 0;
+}
+.information__para1, .information__para2 {
+  margin: 0;
+  padding: 1rem;
+}
+
+.gallery {
+  background-color: #fafafa;
+}
+.gallery__heading {
+  padding: 1rem;
+  margin: 0;
+}
+.gallery__img {
+  width: 100%;
+  height: 22vh;
+  padding: 0 1rem 1rem 1rem;
 }/*# sourceMappingURL=bio.css.map */
