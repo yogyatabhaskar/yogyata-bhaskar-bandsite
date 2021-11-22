@@ -84,6 +84,13 @@
     &__musician{
         padding:0 1rem 1rem 1rem;
         margin: 0;
+        @include tablet {
+            font-size: .875rem;
+       }
+
+       @include desktop{
+           font-size: .875rem;;
+       }
     }
 
     &__bandname{
