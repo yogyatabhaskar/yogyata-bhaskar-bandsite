@@ -38,13 +38,11 @@
 
     &__title {
         @include tablet {
-            margin-right: 4rem;
-            padding-right: 4rem;
+            padding-right: 3rem;
             
         }
         @include desktop {
-            margin-right: 4rem;
-            padding-right: 4rem;
+            padding-right: 3rem;
         }
     }
 
@@ -55,13 +53,15 @@
         width: 7.5rem;
 
         @include tablet {
-            padding: 2rem;
-            width: 12.5rem;
+            
+            width: 7.5rem;
+            align-self: center;
         }
 
         @include desktop {
-            padding: 1rem;
-            width: 12.5rem;
+                      
+            width: 7.5rem;
+            align-self: center;
         }
     }
 
@@ -75,16 +75,16 @@
 
         @include desktop {
             display: flex;
-            
+            width: 90%;
         }
     }
 
     &__associates{
         @include tablet {
-            padding: 1rem;
+            padding-right: 2rem;
         }
         @include desktop {
-            padding: 1rem;
+            padding-right: 5rem;
         }
 
     }

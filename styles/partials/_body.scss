@@ -74,8 +74,14 @@
 
     &__img {
         object-fit: cover;
-        height: 40vh;
+        height: 30vh;
         padding: 0 1rem;
+        @include tablet {
+            height: 35vh;
+       }
+        @include desktop{
+            height: 45vh;
+        }
     } 
 
     &__words {
@@ -165,17 +171,22 @@
     }
     &__img {
         object-fit: cover;
-        height: 35vh;
+        height: 23vh;
         padding: 0 1rem 1rem 1rem;
+        filter: grayscale(1);
         
         @include tablet {
             width: 33%;
-            height: 18vh;
+            height: 20vh;
             
         }
         @include desktop {
             width: 33%;
-            height: 24vh;
+            height: 22vh;
+        }
+
+        &:hover{
+            filter: grayscale(0);
         }
 
     }

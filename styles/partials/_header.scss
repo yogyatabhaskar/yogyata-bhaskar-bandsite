@@ -63,15 +63,7 @@
         text-decoration: none;
         color: $color-tertiary;
         text-decoration: none;
-        padding: 0 2rem 1rem 2rem; 
-        
-        @include tablet{
-            padding: 0 1rem 1.5rem 1rem
-        }
-
-        @include desktop{
-            padding: 0 1rem 1.5rem 1rem
-        }
+        padding: 1.5rem 1rem 1rem 1rem; 
 
         &:hover{
             background-color: $color-quaternary;
