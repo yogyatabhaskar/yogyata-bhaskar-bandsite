@@ -19,9 +19,10 @@ body {
   src: url(../../assets/fonts/font_woff_files/AvenirNextLTPro-Demi.woff2) format("woff2");
 }
 h1 {
-  font-family: avenir-bold;
-  font-size: 1.5rem;
+  font-family: avenir;
+  font-size: 2.5rem;
   line-height: 2rem;
+  font-weight: 600;
 }
 @media (min-width: 48rem) {
   h1 {
@@ -37,9 +38,10 @@ h1 {
 }
 
 h2 {
-  font-family: avenir-bold;
+  font-family: avenir;
   font-size: 1.5rem;
   line-height: 2rem;
+  font-weight: 600;
 }
 @media (min-width: 48rem) {
   h2 {
