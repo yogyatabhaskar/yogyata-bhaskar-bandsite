@@ -61,7 +61,7 @@
 
     &__items {
         text-decoration: none;
-        color: $color-secondary;
+        color: $color-tertiary;
         text-decoration: none;
         padding: 0 2rem 1rem 2rem; 
         
@@ -75,10 +75,12 @@
 
         &:hover{
             background-color: $color-quaternary;
+            color: $color-secondary;
         }
 
         &--active {
             border-bottom: 0.25rem solid $color-secondary; 
+            font-weight: bold;
         }
     }
 
