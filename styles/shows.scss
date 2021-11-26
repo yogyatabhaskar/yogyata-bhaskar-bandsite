@@ -170,3 +170,58 @@
 
     }
 }
+
+.shows{
+    display: flex;
+    flex-direction: column;
+   
+
+    &__heading{
+        padding-left: 2rem;
+        margin-bottom: 0;
+    }
+}
+
+.card{
+    padding: 1rem 0;
+
+    &__content {
+        border-bottom: .0625rem solid $color-quinary;
+
+    }
+
+    &__datehead{
+        padding-left: 2rem;
+        color: $color-tertiary;
+    }
+    &__date {
+        padding-left: 2rem;
+        color: $color-quaternary;
+        font-weight: 600;
+    }
+    &__venuehead{
+        padding-left: 2rem;
+        color: $color-tertiary;
+    }
+    &__venue {
+        padding-left: 2rem;
+        color: $color-quaternary;
+        font-weight: 600;
+    }
+    &__locationhead{
+        padding-left: 2rem;
+        color: $color-tertiary;
+    }
+    &__location {
+        padding-left: 2rem;
+        color: $color-quaternary;
+        font-weight: 600;
+    }
+
+    &__button {
+        margin: 1rem 2rem;
+        padding: 1rem 4rem;
+    }
+
+}
+

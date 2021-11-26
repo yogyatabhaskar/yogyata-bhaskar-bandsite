@@ -3,7 +3,7 @@
 }
 
 body {
-  margin: 0%;
+  margin: 0;
 }
 
 @font-face {
@@ -444,4 +444,51 @@ p {
   .hero__track {
     width: 30%;
   }
+}
+
+.shows {
+  display: flex;
+  flex-direction: column;
+}
+.shows__heading {
+  padding-left: 2rem;
+  margin-bottom: 0;
+}
+
+.card {
+  padding: 1rem 0;
+}
+.card__content {
+  border-bottom: 0.0625rem solid #E1E1E1;
+}
+.card__datehead {
+  padding-left: 2rem;
+  color: #AFAFAF;
+}
+.card__date {
+  padding-left: 2rem;
+  color: #000000;
+  font-weight: 600;
+}
+.card__venuehead {
+  padding-left: 2rem;
+  color: #AFAFAF;
+}
+.card__venue {
+  padding-left: 2rem;
+  color: #000000;
+  font-weight: 600;
+}
+.card__locationhead {
+  padding-left: 2rem;
+  color: #AFAFAF;
+}
+.card__location {
+  padding-left: 2rem;
+  color: #000000;
+  font-weight: 600;
+}
+.card__button {
+  margin: 1rem 2rem;
+  padding: 1rem 4rem;
 }/*# sourceMappingURL=shows.css.map */
