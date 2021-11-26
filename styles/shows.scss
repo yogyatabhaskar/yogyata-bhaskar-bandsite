@@ -2,6 +2,7 @@
 @use './partials/mixins' as *;
 @use './partials/typography' as *;
 @use './partials/variables' as *;
+@use './partials/footer';
 
 .header1{
     background-color: $color-primary;
@@ -10,20 +11,42 @@
     align-items: center;
     width: 100%;
     padding: 1rem 0;
-    //padding-top: 1rem;
-
-    // &__logo{
-    //     padding-top: 1rem;
-    // }
+    
+    @include tablet{
+        flex-direction: row;
+        padding: 1rem 3rem 0 3rem;
+       
+    }
+    @include desktop{
+        flex-direction: row;
+        padding: 1rem 3rem 0 8rem;
+    }
 
     &__logoimg{
         height: 2.25rem;
         width: 12.5rem;
+
+        @include tablet {
+            width: 9.5rem;
+         }
+         @include desktop {
+             width: 9.5rem;
+         }
     }
 
     &__navbar{
         width: 100%;
         margin-top: 1rem;
+
+        @include tablet{
+            margin: 0;
+            padding: 1rem;
+           
+        }
+        @include desktop{
+            margin: 0;
+            padding: 1rem;
+        }
     }
     &__navlist {
         list-style: none;
@@ -32,6 +55,13 @@
         justify-content: space-around;
         margin: 0;
 
+        @include tablet{
+            justify-content: flex-start;
+           
+        }
+        @include desktop{
+            justify-content: flex-start;
+        }
     }
 
     &__items {
@@ -40,6 +70,17 @@
         font-size: 24px;
         font-family: avenir;
         padding: 1rem 8rem;
+
+
+        @include tablet{
+            padding: 1rem;
+            margin-left: 2rem;
+           
+        }
+        @include desktop{
+            padding: 1rem;
+            margin-left: 2rem;
+        }
 
         &:hover{
             background-color: $color-quaternary;
@@ -65,11 +106,14 @@
     position: relative;
 
     @include tablet {
-        height: 30vh;
+        height: 50vh;
     }
     @include desktop {
-        height: 65vh;
+        height: 55vh;
+        flex-direction: row;
+        align-items: center;
     }
+
     &__overlay{
         background: $color-primary;
         width: 100%;
@@ -78,23 +122,51 @@
         position: absolute;  
     }
 
+    &__info{
+        z-index: 1;
+        @include desktop {
+            padding: 0 4rem;
+        }
+    }
+
     &__subheader{
         color: white;
-        z-index: 1;
-        padding: 0 1rem;
+        padding: 0 2rem;
         font-size: 24px;
+        word-spacing: .3125rem;
+        @include desktop {
+            margin-top: 0;
+            padding: 0;
+        }
     }
     &__text {
         color: white;
-        z-index: 1;
         margin: 0;
-        padding: 0 1rem;
-        width: 48vw;
+        padding: 0 2rem;
+        width: 58vw;
         line-height: 3rem;
+        word-spacing: .3125rem;
+
+        @include tablet {
+            width: 75vw;
+            line-height: 4.5rem;
+         }
+         @include desktop {
+             width: 36vw;
+             padding: 0rem;
+         }
     }
 
     &__track{
         z-index: 1;
-        padding: 0 1rem;
+        padding: 0 2rem;
+
+        @include tablet {
+           width: 55%;
+        }
+        @include desktop {
+            width: 30%;
+        }
+
     }
 }
