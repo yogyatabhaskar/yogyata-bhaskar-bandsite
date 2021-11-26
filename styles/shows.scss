@@ -3,3 +3,98 @@
 @use './partials/typography' as *;
 @use './partials/variables' as *;
 
+.header1{
+    background-color: $color-primary;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 0;
+    //padding-top: 1rem;
+
+    // &__logo{
+    //     padding-top: 1rem;
+    // }
+
+    &__logoimg{
+        height: 2.25rem;
+        width: 12.5rem;
+    }
+
+    &__navbar{
+        width: 100%;
+        margin-top: 1rem;
+    }
+    &__navlist {
+        list-style: none;
+        padding: .3125rem 0;
+        display: flex;
+        justify-content: space-around;
+        margin: 0;
+
+    }
+
+    &__items {
+        text-decoration: none;
+        color: $color-quinary;
+        font-size: 24px;
+        font-family: avenir;
+        padding: 1rem 8rem;
+
+        &:hover{
+            background-color: $color-quaternary;
+            color: $color-secondary;
+        }
+
+        &--active {
+            border-bottom: 0.25rem solid $color-secondary; 
+            font-weight: bold;
+        }
+    }
+}
+
+.hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-image: url(../assets/images/hero-shows.jpg);
+    background-position: center;
+    background-size: cover;
+    margin: 0;
+    height: 45vh;
+    position: relative;
+
+    @include tablet {
+        height: 30vh;
+    }
+    @include desktop {
+        height: 65vh;
+    }
+    &__overlay{
+        background: $color-primary;
+        width: 100%;
+        height: 100%;
+        opacity: 0.5;
+        position: absolute;  
+    }
+
+    &__subheader{
+        color: white;
+        z-index: 1;
+        padding: 0 1rem;
+        font-size: 24px;
+    }
+    &__text {
+        color: white;
+        z-index: 1;
+        margin: 0;
+        padding: 0 1rem;
+        width: 48vw;
+        line-height: 3rem;
+    }
+
+    &__track{
+        z-index: 1;
+        padding: 0 1rem;
+    }
+}

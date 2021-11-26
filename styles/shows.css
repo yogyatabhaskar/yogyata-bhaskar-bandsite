@@ -8,15 +8,7 @@ body {
 
 @font-face {
   font-family: "avenir";
-  src: url(../../assets/fonts/font_woff_files/AvenirNextLTPro-Regular.woff2) format("woff2");
-}
-@font-face {
-  font-family: "avenir-bold";
-  src: url(../../assets/fonts/font_woff_files/AvenirNextLTPro-Bold.woff2) format("woff2");
-}
-@font-face {
-  font-family: "avenir-demi";
-  src: url(../../assets/fonts/font_woff_files/AvenirNextLTPro-Demi.woff2) format("woff2");
+  src: url(../../assets/fonts/font_woff_files/AvenirNextLTPro-Regular.woff2) format("woff2"), url(../../assets/fonts/font_woff_files/AvenirNextLTPro-Bold.woff) format("woff");
 }
 h1 {
   font-family: avenir;
@@ -57,7 +49,7 @@ h2 {
 }
 
 h3 {
-  font-family: avenir-demi;
+  font-family: avenir;
   font-size: 0.875rem;
   line-height: 1.375rem;
   font-weight: 600;
@@ -76,7 +68,7 @@ h3 {
 }
 
 h4 {
-  font-family: avenir-demi;
+  font-family: avenir;
   font-size: 0.875rem;
   line-height: 1.375rem;
   font-weight: 600;
@@ -95,7 +87,7 @@ h4 {
 }
 
 li {
-  font-family: avenir-demi;
+  font-family: avenir;
   font-size: 0.875rem;
   line-height: 1.375rem;
 }
@@ -148,4 +140,90 @@ p {
     font-size: 0.875rem;
     line-height: 1.25rem;
   }
+}
+
+.header1 {
+  background-color: #323232;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 0;
+}
+.header1__logoimg {
+  height: 2.25rem;
+  width: 12.5rem;
+}
+.header1__navbar {
+  width: 100%;
+  margin-top: 1rem;
+}
+.header1__navlist {
+  list-style: none;
+  padding: 0.3125rem 0;
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+}
+.header1__items {
+  text-decoration: none;
+  color: #E1E1E1;
+  font-size: 24px;
+  font-family: avenir;
+  padding: 1rem 8rem;
+}
+.header1__items:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+.header1__items--active {
+  border-bottom: 0.25rem solid #ffffff;
+  font-weight: bold;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-image: url(../assets/images/hero-shows.jpg);
+  background-position: center;
+  background-size: cover;
+  margin: 0;
+  height: 45vh;
+  position: relative;
+}
+@media (min-width: 48rem) {
+  .hero {
+    height: 30vh;
+  }
+}
+@media (min-width: 80rem) {
+  .hero {
+    height: 65vh;
+  }
+}
+.hero__overlay {
+  background: #323232;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  position: absolute;
+}
+.hero__subheader {
+  color: white;
+  z-index: 1;
+  padding: 0 1rem;
+  font-size: 24px;
+}
+.hero__text {
+  color: white;
+  z-index: 1;
+  margin: 0;
+  padding: 0 1rem;
+  width: 48vw;
+  line-height: 3rem;
+}
+.hero__track {
+  z-index: 1;
+  padding: 0 1rem;
 }/*# sourceMappingURL=shows.css.map */

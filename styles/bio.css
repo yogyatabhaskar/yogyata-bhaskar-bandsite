@@ -8,15 +8,7 @@ body {
 
 @font-face {
   font-family: "avenir";
-  src: url(../../assets/fonts/font_woff_files/AvenirNextLTPro-Regular.woff2) format("woff2");
-}
-@font-face {
-  font-family: "avenir-bold";
-  src: url(../../assets/fonts/font_woff_files/AvenirNextLTPro-Bold.woff2) format("woff2");
-}
-@font-face {
-  font-family: "avenir-demi";
-  src: url(../../assets/fonts/font_woff_files/AvenirNextLTPro-Demi.woff2) format("woff2");
+  src: url(../../assets/fonts/font_woff_files/AvenirNextLTPro-Regular.woff2) format("woff2"), url(../../assets/fonts/font_woff_files/AvenirNextLTPro-Bold.woff) format("woff");
 }
 h1 {
   font-family: avenir;
@@ -57,7 +49,7 @@ h2 {
 }
 
 h3 {
-  font-family: avenir-demi;
+  font-family: avenir;
   font-size: 0.875rem;
   line-height: 1.375rem;
   font-weight: 600;
@@ -76,7 +68,7 @@ h3 {
 }
 
 h4 {
-  font-family: avenir-demi;
+  font-family: avenir;
   font-size: 0.875rem;
   line-height: 1.375rem;
   font-weight: 600;
@@ -95,7 +87,7 @@ h4 {
 }
 
 li {
-  font-family: avenir-demi;
+  font-family: avenir;
   font-size: 0.875rem;
   line-height: 1.375rem;
 }
