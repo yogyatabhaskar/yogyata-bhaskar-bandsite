@@ -148,16 +148,6 @@ p {
   background-color: #323232;
   color: #ffffff;
   padding: 1rem;
-  /*&__person, &__address, &__id {
-      @include tablet {
-          font-size: .875rem;
-          line-height: 1.25rem;
-      }
-      @include desktop {
-       font-size: .875rem;
-       line-height: 1.25rem;
-   }
-  }*/
 }
 @media (min-width: 48rem) {
   .footer {
@@ -277,7 +267,7 @@ p {
 @media (min-width: 48rem) {
   .header {
     flex-direction: row;
-    padding: 1rem 3rem 0 3rem;
+    padding: 1rem 0 0 2rem;
   }
 }
 @media (min-width: 80rem) {
@@ -307,18 +297,18 @@ p {
 @media (min-width: 48rem) {
   .header__navbar {
     margin: 0;
-    padding: 1rem;
+    padding: 0;
   }
 }
 @media (min-width: 80rem) {
   .header__navbar {
     margin: 0;
-    padding: 1rem;
+    padding: 0;
   }
 }
 .header__navlist {
   list-style: none;
-  padding-top: 0.3125rem;
+  padding: 0.3125rem 0 0 0;
   display: flex;
   justify-content: space-around;
   margin: 0;
@@ -327,16 +317,30 @@ p {
 @media (min-width: 48rem) {
   .header__navlist {
     justify-content: flex-start;
+    flex: 0;
   }
 }
 @media (min-width: 80rem) {
   .header__navlist {
     justify-content: flex-start;
+    flex: 0;
   }
 }
 .header__items {
   display: flex;
   flex: 1;
+}
+@media (min-width: 48rem) {
+  .header__items {
+    flex: 0;
+    padding-left: 2rem;
+  }
+}
+@media (min-width: 80rem) {
+  .header__items {
+    flex: 0;
+    padding-left: 2rem;
+  }
 }
 .header__link {
   text-decoration: none;
@@ -350,13 +354,14 @@ p {
 }
 @media (min-width: 48rem) {
   .header__link {
-    padding: 1rem;
-    margin-left: 2rem;
+    padding: 2rem 0;
+    margin-left: 3rem;
+    flex: 0;
   }
 }
 @media (min-width: 80rem) {
   .header__link {
-    padding: 1rem;
+    padding: 2rem 0;
     margin-left: 2rem;
   }
 }

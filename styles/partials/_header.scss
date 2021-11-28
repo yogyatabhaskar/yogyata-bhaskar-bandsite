@@ -14,7 +14,7 @@
     
     @include tablet{
         flex-direction: row;
-        padding: 1rem 3rem 0 3rem;
+        padding: 1rem 0 0 2rem;
        
     }
     @include desktop{
@@ -28,6 +28,7 @@
 
         @include tablet {
             width: 9.5rem;
+            
          }
          @include desktop {
              width: 9.5rem;
@@ -40,12 +41,12 @@
 
         @include tablet{
             margin: 0;
-            padding: 1rem;
+            padding: 0;
            
         }
         @include desktop{
             margin: 0;
-            padding: 1rem;
+            padding: 0;
         }
     }
     &__navlist {
@@ -58,16 +59,25 @@
 
         @include tablet{
             justify-content: flex-start;
-           
+            flex: 0;
         }
         @include desktop{
             justify-content: flex-start;
+            flex: 0;
         }
     }
 
     &__items {
         display: flex;
         flex: 1;
+        @include tablet{
+            flex: 0;
+            padding-left: 2rem;
+        }
+        @include desktop{
+            flex: 0;
+            padding-left: 2rem;
+        }
     }
 
     &__link {
@@ -82,12 +92,12 @@
 
 
         @include tablet{
-            padding: 1rem;
-            margin-left: 2rem;
-           
+            padding: 2rem 0;
+            margin-left: 3rem;
+            flex: 0;
         }
         @include desktop{
-            padding: 1rem;
+            padding: 2rem 0;
             margin-left: 2rem;
         }
 

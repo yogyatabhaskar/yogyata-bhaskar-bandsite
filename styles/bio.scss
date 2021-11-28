@@ -12,14 +12,14 @@
     background-position: center;
     background-size: cover;
     margin: 0;
-    height: 25vh;
+    height: 45vh;
     position: relative;
 
     @include tablet {
-        height: 30vh;
+        height: 50vh;
     }
     @include desktop {
-        height: 65vh;
+        height: 55vh;
     }
 
     &__overlay{
@@ -36,8 +36,11 @@
         align-items: center;
         z-index: 1;
 
+        @include tablet {
+            padding-left: 3rem;
+        }
         @include desktop {
-            padding: 0 2rem;   
+            padding-left: 8rem;   
         }
     }
 }
@@ -76,13 +79,16 @@
 
     &__img {
         object-fit: cover;
-        height: 30vh;
+        height: 40vh;
         padding: 0 1rem;
         @include tablet {
-            height: 35vh;
+            height: 51vh;
+            padding: 0 3rem;
+
        }
         @include desktop{
-            height: 45vh;
+            height: 55vh;
+            padding: 0 4rem;
         }
     } 
 
@@ -93,10 +99,12 @@
 
         @include tablet {
              font-size: 1.5rem;
+             padding: 1rem 3rem;
         }
 
         @include desktop{
             font-size: 1.5rem;
+            padding: 1rem 4rem;
         }
     }
 
@@ -105,10 +113,12 @@
         margin: 0;
         @include tablet {
             font-size: .875rem;
+            padding: 0 3rem;
        }
 
        @include desktop{
-           font-size: .875rem;;
+           font-size: .875rem;
+           padding: 0 4rem;
        }
     }
 
@@ -173,7 +183,7 @@
     }
     &__img {
         object-fit: cover;
-        height: 23vh;
+        height: 40vh;
         padding: 0 1rem 1rem 1rem;
         filter: grayscale(1);
         
