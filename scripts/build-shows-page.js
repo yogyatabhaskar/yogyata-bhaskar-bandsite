@@ -1,51 +1,59 @@
 const concert = [
-    {
+    
+    { 
+
         date: "Mon Sept 06 2021",
         venue: "Ronald Lane",
         location: "San Francisco, CA",
-        button: "BUY TICKETS"
+        links: '#'
     },
 
     {
         date: "Tue Sept 21 2021",
         venue: "Pier 3 East",
         location: "San Francisco, CA",
-        button: "BUY TICKETS"
+        links: '#'    
     },
 
     {
         date: "Fri Oct 15 2021",
         venue: "View Lounge",
         location: "San Francisco, CA",
-        button: "BUY TICKETS"
+        links: '#'   
     },
 
     {
         date: "Sat Nov 06 2021",
         venue: "Hyatt Agency",
         location: "San Francisco, CA",
-        button: "BUY TICKETS"
-    },
+        links: '#'
+        },
 
     {
         date: "Fri NOV 26 2021",
         venue: "Moscow Center",
         location: "San Francisco, CA",
-        button: "BUY TICKETS"
+        links: '#'
     },
 
     {
         date: "WED DEC 15 2021",
         venue: "Press Club",
         location: "San Francisco, CA",
-        button: "BUY TICKETS",
+        links: '#'
     }
 
 ];
 
+function createButton(url) {
+    const link = document.createElement('a');
+    link.classList.add('card__button');
+    link.setAttribute('href', url);
+    link.innerText = 'BUY TICKETS';
+    return link;
+}
 
 function createCard(show) {
-
     // Content container
     const cardContent = document.createElement('div');
     cardContent.classList.add('card__content');
@@ -86,20 +94,30 @@ function createCard(show) {
     cardContent.appendChild(location);
 
     //BUTTON
-    const button = document.createElement('button')
-    button.classList.add('card__button');
-    button.innerHTML = "Submit";
-    button.innerText = show.button;
-    cardContent.appendChild(button)
+    const ticketLink = createButton(show.links);
+    cardContent.appendChild(ticketLink);
+
+    
 
     return cardContent;
 }
 
 
 
+
+
 const concertEl = document.querySelector('.card');
+
 for (let i = 0; i < concert.length; i++){
     const concertCard = createCard(concert[i]);
     concertEl.appendChild(concertCard);
 }
+
+
+
+
+   
+
+   
+
 

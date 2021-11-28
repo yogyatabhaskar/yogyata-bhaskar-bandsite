@@ -4,13 +4,13 @@
 @use './partials/variables' as *;
 @use './partials/footer';
 
-.header1{
+.header{
     background-color: $color-primary;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    padding: 1rem 0;
+    padding-top: 1rem;
     
     @include tablet{
         flex-direction: row;
@@ -50,10 +50,11 @@
     }
     &__navlist {
         list-style: none;
-        padding: .3125rem 0;
+        padding-top: .3125rem;
         display: flex;
         justify-content: space-around;
         margin: 0;
+        flex: 1;
 
         @include tablet{
             justify-content: flex-start;
@@ -65,11 +66,19 @@
     }
 
     &__items {
+        display: flex;
+        flex: 1;
+    }
+
+    &__link {
         text-decoration: none;
         color: $color-quinary;
         font-size: 24px;
         font-family: avenir;
-        padding: 1rem 8rem;
+        padding: 1rem;
+        display: flex;
+        flex: 1;
+        justify-content: center;
 
 
         @include tablet{
@@ -177,51 +186,90 @@
    
 
     &__heading{
-        padding-left: 2rem;
+        padding: 1rem 2rem 0 2rem;
         margin-bottom: 0;
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: $color-quaternary;
     }
 }
 
 .card{
     padding: 1rem 0;
 
+    
+
     &__content {
         border-bottom: .0625rem solid $color-quinary;
+        padding-top: 2rem;
 
+        @include tablet {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+         }
+         @include desktop {
+           
+         }
     }
 
-    &__datehead{
-        padding-left: 2rem;
+    &__datehead, &__venuehead, &__locationhead{
+        margin: 0;
+        padding: 0 0 0.5rem 2rem;
         color: $color-tertiary;
+        font-size: 0.9rem;
+
+        @include tablet {
+            display: none;
+
+         }
+         @include desktop {
+           display: none;
+         }
     }
-    &__date {
+
+    &__datehead:nth-of-type(1):before{
+        @include tablet {
+        content: "DATE";}
+    }
+		td:nth-of-type(2):before { content: "Last Name"; }
+		td:nth-of-type(3):before { content: "Job Title"; }
+		td:nth-of-type(4):before { content: "Favorite Color"; }
+    
+    
+   
+
+    &__date, &__venue, &__location{
+        margin-top: 0;
         padding-left: 2rem;
         color: $color-quaternary;
         font-weight: 600;
-    }
-    &__venuehead{
-        padding-left: 2rem;
-        color: $color-tertiary;
-    }
-    &__venue {
-        padding-left: 2rem;
-        color: $color-quaternary;
-        font-weight: 600;
-    }
-    &__locationhead{
-        padding-left: 2rem;
-        color: $color-tertiary;
-    }
-    &__location {
-        padding-left: 2rem;
-        color: $color-quaternary;
-        font-weight: 600;
-    }
+        font-size: 1rem;
 
+        @include tablet {
+            
+            
+         }
+         @include desktop {
+           
+         }
+    }
+        
+   
+   
     &__button {
+        display: block;
         margin: 1rem 2rem;
-        padding: 1rem 4rem;
+        padding: 1rem;
+        background-color: $color-primary;
+        border: 1px solid $color-primary;
+        border-radius: 5px;
+        color: $color-secondary;
+        text-decoration: none;
+        text-align: center;
+        font-style: avenir;
+        font-size: 1.5rem;
     }
-
 }
+
 

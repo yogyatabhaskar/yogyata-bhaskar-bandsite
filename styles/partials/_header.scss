@@ -3,67 +3,93 @@
 @use './variables' as *;
 @use './global';
 
+
 .header{
     background-color: $color-primary;
-    padding: 1rem 1rem 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-top: 1rem;
+    
+    @include tablet{
+        flex-direction: row;
+        padding: 1rem 3rem 0 3rem;
+       
+    }
+    @include desktop{
+        flex-direction: row;
+        padding: 1rem 3rem 0 8rem;
+    }
 
-  
-    &__logo{
+    &__logoimg{
         height: 2.25rem;
-        width: 7.5rem;
-    } 
+        width: 12.5rem;
+
+        @include tablet {
+            width: 9.5rem;
+         }
+         @include desktop {
+             width: 9.5rem;
+         }
+    }
 
     &__navbar{
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        width: 100%; 
-        justify-content: center; 
-        
+        width: 100%;
+        margin-top: 1rem;
+
         @include tablet{
-            flex-direction: row;
+            margin: 0;
+            padding: 1rem;
            
         }
         @include desktop{
-            flex-direction: row;
-            padding: 0 36px;
+            margin: 0;
+            padding: 1rem;
         }
     }
-
-    &__link {
-        @include tablet {
-            padding: 0 2.25rem;
-        }
-        @include desktop{
-            padding: 0 36px;
-        }
-    }
-
-    &__navlist{
-        width: 100%;
-        display: flex;
+    &__navlist {
         list-style: none;
+        padding: .3125rem 0 0 0;
+        display: flex;
+        justify-content: space-around;
         margin: 0;
-        padding: 0;
-        justify-content: space-between;
+        flex: 1;
 
         @include tablet{
             justify-content: flex-start;
-            align-items: flex-start;
+           
         }
         @include desktop{
             justify-content: flex-start;
-            align-items: flex-start;
         }
-        
     }
-    
 
     &__items {
+        display: flex;
+        flex: 1;
+    }
+
+    &__link {
         text-decoration: none;
-        color: $color-tertiary;
-        text-decoration: none;
-        padding: 1.5rem 1rem 1rem 1rem; 
+        color: $color-quinary;
+        font-size: 24px;
+        font-family: avenir;
+        padding: 1rem;
+        display: flex;
+        flex: 1;
+        justify-content: center;
+
+
+        @include tablet{
+            padding: 1rem;
+            margin-left: 2rem;
+           
+        }
+        @include desktop{
+            padding: 1rem;
+            margin-left: 2rem;
+        }
 
         &:hover{
             background-color: $color-quaternary;
@@ -75,6 +101,4 @@
             font-weight: bold;
         }
     }
-
-
 }

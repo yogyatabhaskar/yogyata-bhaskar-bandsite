@@ -10,13 +10,16 @@
 <body>
     <!-- Header section- title and navigation-->
     <header class="header">
-        <nav class="header__navbar">
+        <div class="header__logo">
             <a class="header__link" href="./index.html">
-                <img class="header__logo" src="./assets/logos/Logo-bandsite.svg" alt="bandsite-logo">
+                <img class="header__logoimg" src="./assets/logos/Logo-bandsite.svg" alt="bandsite-logo">
             </a>
+        </div>
+        
+        <nav class="header__navbar">
             <ul class="header__navlist">
-                <li><a class="header__items header__items--active" href="#">Biography</a></li>
-                <li><a class="header__items" href= "#">Shows</a></li>
+                <li class="header__items"><a class="header__link header__link--active" href="#">Biography</a></li>
+                <li class="header__items"><a class="header__link" href= "#">Shows</a></li>
                 
             </ul>           
         </nav>
@@ -70,6 +73,36 @@
                 <img src="./assets/images/Photo-gallery-9.jpg" alt="concert-img9" class="gallery__img"> 
             </div>
              </div>
+
+             <section class="panel">
+                <h1 class="panel__title">Join the Conversation</h1>
+                
+                <!-- Appointment Form -->
+                <form class="comment-form">
+                    <!-- Name input -->
+                    <label for="fullName">Name</label>
+                    <input type="text" name="fullName" id="fullName" placeholder="Enter your name">
+                
+                    <!--Date Section-->    
+                    <div id="date"></div>    
+                
+                    <!-- Textarea -->
+                    <label for="commentsec">Comment</label>
+                    <textarea name="comments" id="commentsec" placeholder="Add a new comment"></textarea>
+                
+                    <!-- Submit button -->
+                    <button type="submit" class="comment-form__button">Comment</button>
+                </form>
+                </section>
+                
+                <section class="panel">
+                <div id="comment-area">
+                    <!-- Articles here -->
+                </div>
+                </section>
+                
+                
+                
     </main>
 
     <!--footer-->
@@ -150,6 +183,5 @@
         </div>
 
     </footer>
-
-</body>
+    <script src="./scripts/index-page.js"></script>
 </html>
