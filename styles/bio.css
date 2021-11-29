@@ -4,6 +4,7 @@
 
 body {
   margin: 0;
+  font-family: "avenir";
 }
 
 @font-face {
@@ -33,7 +34,7 @@ h2 {
   font-family: avenir;
   font-size: 1.5rem;
   line-height: 2rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 @media (min-width: 48rem) {
   h2 {
@@ -381,7 +382,7 @@ p {
   background-position: center;
   background-size: cover;
   margin: 0;
-  height: 45vh;
+  height: 35vh;
   position: relative;
 }
 @media (min-width: 48rem) {
@@ -456,12 +457,12 @@ p {
 .information__img {
   -o-object-fit: cover;
      object-fit: cover;
-  height: 40vh;
+  height: 30vh;
   padding: 0 1rem;
 }
 @media (min-width: 48rem) {
   .information__img {
-    height: 51vh;
+    height: 35vh;
     padding: 0 3rem;
   }
 }
@@ -569,7 +570,7 @@ p {
 .gallery__img {
   -o-object-fit: cover;
      object-fit: cover;
-  height: 40vh;
+  height: 27vh;
   padding: 0 1rem 1rem 1rem;
   filter: grayscale(1);
 }
@@ -609,6 +610,16 @@ p {
   padding: 1rem 0;
   margin: 0 2rem;
   border-bottom: 0.0625rem solid #AFAFAF;
+}
+@media (min-width: 48rem) {
+  .form {
+    margin: 2rem 6rem;
+  }
+}
+@media (min-width: 80rem) {
+  .form {
+    margin: 3rem 17rem;
+  }
 }
 .form__thumbnail {
   width: 2.25rem;
@@ -684,6 +695,17 @@ p {
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
+  border-bottom: 0.0625rem solid #E1E1E1;
+}
+@media (min-width: 48rem) {
+  .view__content {
+    margin: 2rem 6rem;
+  }
+}
+@media (min-width: 80rem) {
+  .view__content {
+    margin: 3rem 17rem;
+  }
 }
 .view__thumbnail {
   width: 2.25rem;

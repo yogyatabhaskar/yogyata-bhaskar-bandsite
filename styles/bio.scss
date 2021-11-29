@@ -12,7 +12,7 @@
     background-position: center;
     background-size: cover;
     margin: 0;
-    height: 45vh;
+    height: 35vh;
     position: relative;
 
     @include tablet {
@@ -79,10 +79,10 @@
 
     &__img {
         object-fit: cover;
-        height: 40vh;
+        height: 30vh;
         padding: 0 1rem;
         @include tablet {
-            height: 51vh;
+            height: 35vh;
             padding: 0 3rem;
 
        }
@@ -183,7 +183,7 @@
     }
     &__img {
         object-fit: cover;
-        height: 40vh;
+        height: 27vh;
         padding: 0 1rem 1rem 1rem;
         filter: grayscale(1);
         
@@ -224,6 +224,12 @@
     padding: 1rem 0;
     margin: 0 2rem;
     border-bottom: .0625rem solid $color-tertiary;
+    @include tablet {
+        margin: 2rem 6rem;
+    }
+    @include desktop {
+        margin: 3rem 17rem;
+    }
 
     &__thumbnail {
         width: 2.25rem;
@@ -321,6 +327,13 @@
         flex-wrap: wrap;
         justify-content: flex-start;
         align-items: center;
+        border-bottom: .0625rem solid $color-quinary;
+        @include tablet {
+            margin: 2rem 6rem;
+        }
+        @include desktop {
+            margin: 3rem 17rem;
+        }
     }
     &__thumbnail {
         width: 2.25rem;

@@ -61,8 +61,9 @@ function renderComments() {
     }
 }
 
-const currentDate = new Date();   //rename
-    console.log(currentDate);
+const today = new Date();   
+const date =today.getFullYear()+'/'+(today.getMonth()+1)+'/'+today.getDate();
+console.log(date);
 
 
 
@@ -71,10 +72,9 @@ function handleCommentSubmit (event) {
     event.preventDefault();
 
     const cardData = {
-        
-        name: event.target.fullName.value,
-        date: currentDate,
-        remarks: event.target.commentsec.value
+    name: event.target.fullName.value,
+    date: date,
+    remarks: event.target.commentsec.value
     };
 
     commenttext.unshift(cardData);

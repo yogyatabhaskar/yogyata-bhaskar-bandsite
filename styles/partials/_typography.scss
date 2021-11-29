@@ -29,7 +29,8 @@ h2{
     font-family: avenir;
     font-size: 1.5rem;
     line-height: 2rem;
-    font-weight: 600;
+    font-weight: 700;
+    
     @include tablet {
         font-size: 2.25rem;
         line-height: 2.75rem;
