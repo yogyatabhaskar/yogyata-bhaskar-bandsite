@@ -43,7 +43,6 @@
     &__subheader{
         color: white;
         padding: 0 2rem;
-        font-size: 24px;
         word-spacing: .3125rem;
         @include desktop {
             margin-top: 0;
@@ -54,12 +53,12 @@
         color: white;
         margin: 0;
         padding: 0 2rem;
-        width: 58vw;
-        line-height: 3rem;
+        width: 80vw;
+    
         word-spacing: .3125rem;
 
         @include tablet {
-            width: 75vw;
+            width: 70vw;
             line-height: 4.5rem;
          }
          @include desktop {
@@ -90,8 +89,6 @@
     &__heading{
         padding: 1rem 2rem;
         margin-bottom: 0;
-        font-size: 2.5rem;
-        font-weight: 700;
         color: $color-quaternary;
     }
 }
@@ -129,7 +126,6 @@
         margin: 0;
         padding: 0 0 0.5rem 2rem;
         color: $color-tertiary;
-        font-size: 0.9rem;
 
         @include tablet {
             display: none;
@@ -160,14 +156,12 @@
         @include tablet {
             display: flex;
             color: $color-tertiary;
-            font-size: 0.9rem;
             width: 33%;
             padding-left: 4rem;
          }
          @include desktop {
             display: flex;
             color: $color-tertiary;
-            font-size: 0.9rem;
             width: 33%;
             padding-left: 5rem;
          }
@@ -181,8 +175,6 @@
         margin-top: 0;
         padding-left: 2rem;
         color: $color-quaternary;
-        font-weight: 600;
-        font-size: 1rem;
 
         @include tablet {
             
@@ -205,8 +197,6 @@
         color: $color-secondary;
         text-decoration: none;
         text-align: center;
-        font-style: avenir;
-        font-size: 1.5rem;
 
         &:hover{
             background-color: $color-quaternary;

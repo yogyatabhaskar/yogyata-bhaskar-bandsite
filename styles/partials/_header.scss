@@ -30,9 +30,7 @@
             width: 9.5rem;
             
          }
-         @include desktop {
-             width: 9.5rem;
-         }
+       
     }
 
     &__navbar{
@@ -44,10 +42,7 @@
             padding: 0;
            
         }
-        @include desktop{
-            margin: 0;
-            padding: 0;
-        }
+        
     }
     &__navlist {
         list-style: none;
@@ -61,10 +56,7 @@
             justify-content: flex-start;
             flex: 0;
         }
-        @include desktop{
-            justify-content: flex-start;
-            flex: 0;
-        }
+       
     }
 
     &__items {
@@ -74,17 +66,12 @@
             flex: 0;
             padding-left: 2rem;
         }
-        @include desktop{
-            flex: 0;
-            padding-left: 2rem;
-        }
+    
     }
 
     &__link {
         text-decoration: none;
         color: $color-quinary;
-        font-size: 24px;
-        font-family: avenir;
         padding: 1rem;
         display: flex;
         flex: 1;

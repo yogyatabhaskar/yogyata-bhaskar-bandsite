@@ -10,113 +10,84 @@
 
 
 h1{
-    font-family: avenir;
-    font-size: 2.5rem;
-    line-height: 2rem; 
-    font-weight: 600;
+    font-family: 'avenir';
+    font-size: 3.0rem;
+    line-height: 4rem; 
+    font-weight: 700;
 
     @include tablet {
-        font-size: 3.75rem;
+        font-size: 4rem;
         line-height: 4.25rem;
     }
     @include desktop {
-        font-size: 3.75rem;
+        font-size: 4.5rem;
         line-height: 4.25rem;
     }
 }
 
 h2{
     font-family: avenir;
-    font-size: 1.5rem;
+    font-size: 3.0rem;
     line-height: 2rem;
     font-weight: 700;
-    
+
     @include tablet {
-        font-size: 2.25rem;
-        line-height: 2.75rem;
-    }
-    @include desktop {
-        font-size: 2.25rem;
+        font-size: 3rem;
         line-height: 2.75rem;
     }
 }
 
 h3{
-    font-family: avenir;
-    font-size: .875rem;
+    font-family: 'avenir';
+    font-size: 1.5rem;
     line-height: 1.375rem;
     font-weight: 600;
 
     @include tablet {
-        font-size: 1.5rem;
+        font-size: 2.5rem;
         line-height: 2rem;
-    }
-    @include desktop {
-        font-size: 1.5rem;
-        line-height: 2rem;
-    }
-}
-
-h4 {
-    font-family: avenir;
-    font-size: .875rem;
-    line-height: 1.375rem;
-    font-weight: 600;
-
-    @include tablet {
-        font-size: 1.5rem;
-        line-height: 2rem;
-    }
-    @include desktop {
-        font-size: 1.5rem;
-        line-height: 2rem;
-    }
-}
-
-li {
-    font-family: avenir;
-    font-size: .875rem;
-    line-height: 1.375rem;
-    @include tablet {
-        font-size: 1.5rem;
-        line-height: 2rem;
-    }
-    @include desktop {
-        font-size: 1.5rem;
-        line-height: 2rem;
-    }
-    
-}
-
-p {
-    font-family: avenir;
-    font-size: .8125rem;
-    line-height: 1.125rem;
-    font-weight: 400;
-    @include tablet {
-        font-size: .875rem;
-        line-height: 1.375rem;
-    }
-    @include desktop {
-        font-size: 1.5rem;
-        line-height: 1.375rem;
     }
    
 }
 
-.footer li, .footer p{
-    font-family: avenir;
-    font-size: .8125rem;
-    line-height: 1.125rem;
-    font-weight: 400;
+h4 {
+    font-family: 'avenir';
+    font-size: .875rem;
+    line-height: 1.375rem;
+    font-weight: 600;
 
     @include tablet {
-        font-size: .875rem;
-        line-height: 1.25rem;
+        font-size: 1.5rem;
+        line-height: 2rem;
     }
     @include desktop {
-     font-size: .875rem;
-     line-height: 1.25rem;
- }
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
 }
+
+a {
+    font-family: 'avenir';
+    font-size: 2rem;
+    line-height: 1.375rem;
+    @include tablet {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+    
+    
+}
+
+p {
+    font-family: 'avenir';
+    font-size: 1.15rem;
+    line-height: 1.25rem;
+    font-weight: 400;
+    @include tablet {
+        font-size: 1.5rem;
+        line-height: 1.375rem;
+    }
+}
+
+
 

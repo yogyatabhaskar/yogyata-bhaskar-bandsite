@@ -12,64 +12,52 @@ body {
   src: url(../assets/fonts/font_woff_files/AvenirNextLTPro-Regular.woff2) format("woff2"), url(../assets/fonts/font_woff_files/AvenirNextLTPro-Bold.woff) format("woff"), url(../../assets/fonts/AvenirNextLTPro-Regular.otf) format("otf");
 }
 h1 {
-  font-family: avenir;
-  font-size: 2.5rem;
-  line-height: 2rem;
-  font-weight: 600;
+  font-family: "avenir";
+  font-size: 3rem;
+  line-height: 4rem;
+  font-weight: 700;
 }
 @media (min-width: 48rem) {
   h1 {
-    font-size: 3.75rem;
+    font-size: 4rem;
     line-height: 4.25rem;
   }
 }
 @media (min-width: 80rem) {
   h1 {
-    font-size: 3.75rem;
+    font-size: 4.5rem;
     line-height: 4.25rem;
   }
 }
 
 h2 {
   font-family: avenir;
-  font-size: 1.5rem;
+  font-size: 3rem;
   line-height: 2rem;
   font-weight: 700;
 }
 @media (min-width: 48rem) {
   h2 {
-    font-size: 2.25rem;
-    line-height: 2.75rem;
-  }
-}
-@media (min-width: 80rem) {
-  h2 {
-    font-size: 2.25rem;
+    font-size: 3rem;
     line-height: 2.75rem;
   }
 }
 
 h3 {
-  font-family: avenir;
-  font-size: 0.875rem;
+  font-family: "avenir";
+  font-size: 1.5rem;
   line-height: 1.375rem;
   font-weight: 600;
 }
 @media (min-width: 48rem) {
   h3 {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-}
-@media (min-width: 80rem) {
-  h3 {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     line-height: 2rem;
   }
 }
 
 h4 {
-  font-family: avenir;
+  font-family: "avenir";
   font-size: 0.875rem;
   line-height: 1.375rem;
   font-weight: 600;
@@ -87,59 +75,28 @@ h4 {
   }
 }
 
-li {
-  font-family: avenir;
-  font-size: 0.875rem;
+a {
+  font-family: "avenir";
+  font-size: 2rem;
   line-height: 1.375rem;
 }
 @media (min-width: 48rem) {
-  li {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-}
-@media (min-width: 80rem) {
-  li {
+  a {
     font-size: 1.5rem;
     line-height: 2rem;
   }
 }
 
 p {
-  font-family: avenir;
-  font-size: 0.8125rem;
-  line-height: 1.125rem;
+  font-family: "avenir";
+  font-size: 1.15rem;
+  line-height: 1.25rem;
   font-weight: 400;
 }
 @media (min-width: 48rem) {
-  p {
-    font-size: 0.875rem;
-    line-height: 1.375rem;
-  }
-}
-@media (min-width: 80rem) {
   p {
     font-size: 1.5rem;
     line-height: 1.375rem;
-  }
-}
-
-.footer li, .footer p {
-  font-family: avenir;
-  font-size: 0.8125rem;
-  line-height: 1.125rem;
-  font-weight: 400;
-}
-@media (min-width: 48rem) {
-  .footer li, .footer p {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
-}
-@media (min-width: 80rem) {
-  .footer li, .footer p {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
   }
 }
 
@@ -221,6 +178,9 @@ p {
     width: 90%;
   }
 }
+.footer__id {
+  font-size: 1rem;
+}
 @media (min-width: 48rem) {
   .footer__associates {
     padding-right: 2rem;
@@ -286,22 +246,11 @@ p {
     width: 9.5rem;
   }
 }
-@media (min-width: 80rem) {
-  .header__logoimg {
-    width: 9.5rem;
-  }
-}
 .header__navbar {
   width: 100%;
   margin-top: 1rem;
 }
 @media (min-width: 48rem) {
-  .header__navbar {
-    margin: 0;
-    padding: 0;
-  }
-}
-@media (min-width: 80rem) {
   .header__navbar {
     margin: 0;
     padding: 0;
@@ -321,12 +270,6 @@ p {
     flex: 0;
   }
 }
-@media (min-width: 80rem) {
-  .header__navlist {
-    justify-content: flex-start;
-    flex: 0;
-  }
-}
 .header__items {
   display: flex;
   flex: 1;
@@ -337,17 +280,9 @@ p {
     padding-left: 2rem;
   }
 }
-@media (min-width: 80rem) {
-  .header__items {
-    flex: 0;
-    padding-left: 2rem;
-  }
-}
 .header__link {
   text-decoration: none;
   color: #E1E1E1;
-  font-size: 24px;
-  font-family: avenir;
   padding: 1rem;
   display: flex;
   flex: 1;
@@ -416,7 +351,6 @@ p {
 .hero__subheader {
   color: white;
   padding: 0 2rem;
-  font-size: 24px;
   word-spacing: 0.3125rem;
 }
 @media (min-width: 80rem) {
@@ -429,13 +363,12 @@ p {
   color: white;
   margin: 0;
   padding: 0 2rem;
-  width: 58vw;
-  line-height: 3rem;
+  width: 80vw;
   word-spacing: 0.3125rem;
 }
 @media (min-width: 48rem) {
   .hero__text {
-    width: 75vw;
+    width: 70vw;
     line-height: 4.5rem;
   }
 }
@@ -467,8 +400,6 @@ p {
 .shows__heading {
   padding: 1rem 2rem;
   margin-bottom: 0;
-  font-size: 2.5rem;
-  font-weight: 700;
   color: #000000;
 }
 
@@ -503,7 +434,6 @@ p {
   margin: 0;
   padding: 0 0 0.5rem 2rem;
   color: #AFAFAF;
-  font-size: 0.9rem;
 }
 @media (min-width: 48rem) {
   .card__datehead, .card__venuehead, .card__locationhead {
@@ -539,7 +469,6 @@ p {
   .card__datehead1, .card__venuehead1, .card__locationhead1 {
     display: flex;
     color: #AFAFAF;
-    font-size: 0.9rem;
     width: 33%;
     padding-left: 4rem;
   }
@@ -548,7 +477,6 @@ p {
   .card__datehead1, .card__venuehead1, .card__locationhead1 {
     display: flex;
     color: #AFAFAF;
-    font-size: 0.9rem;
     width: 33%;
     padding-left: 5rem;
   }
@@ -557,8 +485,6 @@ p {
   margin-top: 0;
   padding-left: 2rem;
   color: #000000;
-  font-weight: 600;
-  font-size: 1rem;
 }
 .card__button {
   display: block;
@@ -570,8 +496,6 @@ p {
   color: #ffffff;
   text-decoration: none;
   text-align: center;
-  font-style: avenir;
-  font-size: 1.5rem;
 }
 .card__button:hover {
   background-color: #000000;

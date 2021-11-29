@@ -51,8 +51,8 @@
     background-color: $color-secondary;
 
     &__title{
-        padding: 1.5rem 1rem 1rem 1rem;
-        margin: 0;
+        padding: 2rem 1rem 0 1rem;
+        margin-top: 1rem;
 
         @include tablet{
             padding: 2.5rem 3.5rem 0 3.5rem;
@@ -93,17 +93,15 @@
     } 
 
     &__words {
-        font-size: .875rem;
+        font-size: 1.5rem;
         padding: 1rem;
         margin: 0;
 
         @include tablet {
-             font-size: 1.5rem;
              padding: 1rem 3rem;
         }
 
         @include desktop{
-            font-size: 1.5rem;
             padding: 1rem 4rem;
         }
     }
@@ -129,11 +127,6 @@
 
     &__para{
         @include tablet{
-           
-            display: flex;
-        }
-        @include desktop{
-           
             display: flex;
         }
         
@@ -143,12 +136,12 @@
     &__para1, &__para2 {
         margin: 0;
         padding: 1rem;
+        word-spacing: 0.3rem;
+        line-height: 1.5rem;
         @include tablet{
             font-size: .875rem;
         }
-        @include desktop{
-            font-size: .875rem;
-        }
+       
     }
 
 }
@@ -283,8 +276,7 @@
     }
 
     &__name  {
-        
-        font-size: .875rem;
+        color: $color-tertiary;
         padding-bottom: 0.5rem;
     }
 
@@ -304,6 +296,7 @@
     &__comment {
         font-size: .875rem;
         padding: 0.5rem 0;
+        color: $color-tertiary;
        
     }
     &__commentbar{
@@ -350,7 +343,7 @@
         margin-left: auto;
     }
     &__remarks {
-        padding: 0 3rem;
+        line-height: 2rem;
     }
     
 }
