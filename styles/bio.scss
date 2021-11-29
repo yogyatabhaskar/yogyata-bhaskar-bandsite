@@ -161,7 +161,7 @@
         padding: 1rem;
         margin: 0;
         @include tablet {
-            padding: 2.5rem 3.5rem 0 3.5rem;;
+            padding: 2.5rem 3.5rem 0 3.5rem;
         }
         @include desktop {
             padding: 2.5rem 3.5rem 0 3.5rem;
@@ -202,6 +202,145 @@
         }
 
     }
+}
+
+.panel {
+    
+    &__title {
+        padding: 1rem;
+
+        margin: 0;
+        @include tablet {
+            padding: 2.5rem 3.5rem 0 3.5rem;
+        }
+        @include desktop {
+            padding: 2.5rem 3.5rem 0 3.5rem;
+        }
+    }
+}
+
+.form {
+    display: flex;
+    padding: 1rem 0;
+    margin: 0 2rem;
+    border-bottom: .0625rem solid $color-tertiary;
+
+    &__thumbnail {
+        width: 2.25rem;
+        height: 2.25rem;
+        border-radius: 50%;
+        margin-top: 1.5rem;
+        background-image: "";
+        background: $color-quinary;
+        position: relative;
+
+        &::before {
+            content: '';
+            width: 2.25rem;
+            height: 2.25rem;
+            background-color: rgb(8, 8, 8);
+            border-radius: 50%;
+            position: absolute;
+            top: 10rem;
+            left: 3rem;
+            
+            //transform: translateY(-50%);
+        }
+    }
+
 
 }
+
+.comment-form {
+    margin: 0 4rem 0 1rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 2;
+   
+
+
+    &__button {
+        border: none;
+        background-color: $color-primary;
+        color: $color-secondary;
+        height: 2.5rem;
+        font-size: 1rem;
+        padding: 0.5rem 2rem;
+        border-radius: .25rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+        margin: 1rem 0;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $color-quaternary;
+        }
+    }
+
+    &__name  {
+        
+        font-size: .875rem;
+        padding-bottom: 0.5rem;
+    }
+
+    &__namebar{
+        
+        border: .0625rem solid $color-quinary;
+        height: 2.25rem;
+        border-radius: .25rem;
+        background-color: $color-senary;
+
+        &__:active {
+            border: .0625rem solid $color-primary;  
+        }
+
+    }
+
+    &__comment {
+        font-size: .875rem;
+        padding: 0.5rem 0;
+       
+    }
+    &__commentbar{
+        border: .0625rem solid $color-quinary;
+        height: 4.25rem;
+        border-radius: .25rem;
+        background-color: $color-senary;
+        &__:active {
+            border: .0625rem solid $color-primary;  
+        }
+    }
+}
+
+.view {
+
+    
+
+    &__content {
+        padding: 1rem 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    &__thumbnail {
+        width: 2.25rem;
+        height: 2.25rem;
+        border: 1px solid $color-quinary;
+        border-radius: 50%;
+        background-color: $color-quinary;
+    }
+    &__name {
+        padding-left: 1rem;
+    }
+    
+    &__date {
+        margin-left: auto;
+    }
+    &__remarks {
+        padding: 0 3rem;
+    }
+    
+}
+
+
 

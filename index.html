@@ -72,37 +72,36 @@
                 <img src="./assets/images/Photo-gallery-8.jpg" alt="concert-img8" class="gallery__img">
                 <img src="./assets/images/Photo-gallery-9.jpg" alt="concert-img9" class="gallery__img"> 
             </div>
-             </div>
-
-             <section class="panel">
-                <h1 class="panel__title">Join the Conversation</h1>
-                
+        </div>
+        <section class="panel">
+            <h2 class="panel__title">Join the Conversation</h2>
+            
+            <div class="form">
+                <img src="./assets/images/Mohan-muruge.jpg" alt="thumbnail-picture" class="form__thumbnail" id="thumbnail">
                 <!-- Appointment Form -->
                 <form class="comment-form">
                     <!-- Name input -->
-                    <label for="fullName">Name</label>
-                    <input type="text" name="fullName" id="fullName" placeholder="Enter your name">
-                
-                    <!--Date Section-->    
-                    <div id="date"></div>    
-                
+                    <label class="comment-form__name" for="fullName">NAME</label>
+                    <input type="text" name="fullName" class="comment-form__namebar" id="fullName" placeholder="Enter your name">    
+            
                     <!-- Textarea -->
-                    <label for="commentsec">Comment</label>
-                    <textarea name="comments" id="commentsec" placeholder="Add a new comment"></textarea>
-                
+                    <label class="comment-form__comment" for="commentsec">COMMENT</label>
+                    <textarea name="comments" id="commentsec" class="comment-form__commentbar" placeholder="Add a new comment"></textarea>
+            
                     <!-- Submit button -->
-                    <button type="submit" class="comment-form__button">Comment</button>
+                    <button type="submit" class="comment-form__button">COMMENT</button>
                 </form>
-                </section>
+        
+            </div>
+        </section>
+            
                 
-                <section class="panel">
-                <div id="comment-area">
-                    <!-- Articles here -->
-                </div>
-                </section>
-                
-                
-                
+        <section class="view">
+            <div id="view__area">
+                <!-- Articles here -->
+            </div>
+        </section>
+                   
     </main>
 
     <!--footer-->
@@ -185,3 +184,4 @@
     </footer>
     <script src="./scripts/index-page.js"></script>
 </html>
+

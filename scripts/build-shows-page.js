@@ -53,6 +53,30 @@ function createButton(url) {
     return link;
 }
 
+ // Content container
+const cardContent1 = document.createElement('div');
+cardContent1.classList.add('card__content1');
+
+const datehead1 = document.createElement('p');
+datehead1.classList.add('card__datehead1');
+datehead1.innerText = "DATE";
+cardContent1.appendChild(datehead1);
+
+
+const venuehead1 = document.createElement('p')
+venuehead1.classList.add('card__venuehead1');
+venuehead1.innerText = "VENUE";
+cardContent1.appendChild(venuehead1);
+
+const locationhead1 = document.createElement('p')
+locationhead1.classList.add('card__locationhead1');
+locationhead1.innerText = "LOCATION";
+cardContent1.appendChild(locationhead1);
+
+const concertEl1 = document.querySelector('.card');
+concertEl1.appendChild(cardContent1);
+  
+
 function createCard(show) {
     // Content container
     const cardContent = document.createElement('div');
@@ -99,7 +123,7 @@ function createCard(show) {
 
     
 
-    return cardContent;
+  return cardContent;
 }
 
 
@@ -107,6 +131,7 @@ function createCard(show) {
 
 
 const concertEl = document.querySelector('.card');
+
 
 for (let i = 0; i < concert.length; i++){
     const concertCard = createCard(concert[i]);

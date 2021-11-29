@@ -5,7 +5,6 @@
 @use './partials/footer';
 @use './partials/header';
 
-
 .hero{
     display: flex;
     flex-direction: column;
@@ -89,7 +88,7 @@
    
 
     &__heading{
-        padding: 1rem 2rem 0 2rem;
+        padding: 1rem 2rem;
         margin-bottom: 0;
         font-size: 2.5rem;
         font-weight: 700;
@@ -100,11 +99,17 @@
 .card{
     padding: 1rem 0;
 
-    
-
     &__content {
         border-bottom: .0625rem solid $color-quinary;
         padding-top: 2rem;
+
+        &__:active {
+            background-color: $color-quinary;
+        }
+
+        &__:hover{
+            background-color: $color-senary;
+        }
 
         @include tablet {
             display: flex;
@@ -112,9 +117,21 @@
             justify-content: space-between;
          }
          @include desktop {
-           
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
          }
     }
+
+    &__content1{
+        display: flex;
+        height: 1rem;
+        width: 75%;
+        display: none;
+    }
+   
+
+
 
     &__datehead, &__venuehead, &__locationhead{
         margin: 0;
@@ -124,20 +141,30 @@
 
         @include tablet {
             display: none;
-
          }
          @include desktop {
            display: none;
          }
     }
 
-    &__datehead:nth-of-type(1):before{
+    &__datehead1, &__venuehead1, &__locationhead1{
+        display: none;
         @include tablet {
-        content: "DATE";}
+            display: flex;
+            color: $color-tertiary;
+            font-size: 0.9rem;
+            width: 33%;
+            padding-left: 4rem;
+         }
+         @include desktop {
+            display: flex;
+            color: $color-tertiary;
+            font-size: 0.9rem;
+            width: 33%;
+            padding-left: 5rem;
+         }
+         
     }
-		td:nth-of-type(2):before { content: "Last Name"; }
-		td:nth-of-type(3):before { content: "Job Title"; }
-		td:nth-of-type(4):before { content: "Favorite Color"; }
     
     
    

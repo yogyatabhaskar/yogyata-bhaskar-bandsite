@@ -464,7 +464,7 @@ p {
   flex-direction: column;
 }
 .shows__heading {
-  padding: 1rem 2rem 0 2rem;
+  padding: 1rem 2rem;
   margin-bottom: 0;
   font-size: 2.5rem;
   font-weight: 700;
@@ -478,12 +478,31 @@ p {
   border-bottom: 0.0625rem solid #E1E1E1;
   padding-top: 2rem;
 }
+.card__content__:active {
+  background-color: #E1E1E1;
+}
+.card__content__:hover {
+  background-color: #fafafa;
+}
 @media (min-width: 48rem) {
   .card__content {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
+}
+@media (min-width: 80rem) {
+  .card__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+.card__content1 {
+  display: flex;
+  height: 1rem;
+  width: 75%;
+  display: none;
 }
 .card__datehead, .card__venuehead, .card__locationhead {
   margin: 0;
@@ -501,19 +520,26 @@ p {
     display: none;
   }
 }
+.card__datehead1, .card__venuehead1, .card__locationhead1 {
+  display: none;
+}
 @media (min-width: 48rem) {
-  .card__datehead:nth-of-type(1):before {
-    content: "DATE";
+  .card__datehead1, .card__venuehead1, .card__locationhead1 {
+    display: flex;
+    color: #AFAFAF;
+    font-size: 0.9rem;
+    width: 33%;
+    padding-left: 4rem;
   }
 }
-.card td:nth-of-type(2):before {
-  content: "Last Name";
-}
-.card td:nth-of-type(3):before {
-  content: "Job Title";
-}
-.card td:nth-of-type(4):before {
-  content: "Favorite Color";
+@media (min-width: 80rem) {
+  .card__datehead1, .card__venuehead1, .card__locationhead1 {
+    display: flex;
+    color: #AFAFAF;
+    font-size: 0.9rem;
+    width: 33%;
+    padding-left: 5rem;
+  }
 }
 .card__date, .card__venue, .card__location {
   margin-top: 0;
