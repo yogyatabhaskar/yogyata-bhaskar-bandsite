@@ -34,14 +34,14 @@ const form = document.querySelector('.comment-form');
 const formEvent = form.addEventListener('submit', event => {
     event.preventDefault();
 
-    const fullname = document.querySelector('#fullName').textContent;
-    //const postedDate: date1,
-    const commentSec = document.querySelector('#commentsec').textContent;
+    const fullname = document.querySelector('#fullName').value;
+    // date1,
+    const commentSec = document.querySelector('#commentsec').value;
 
     const user = { fullname, commentSec };
-    createUser(user);
+    //createUser(user);
     console.log(user);
-   
+    
 });
 
 const today = new Date();   
@@ -54,13 +54,9 @@ axios
     console.log(response.data);
     addComments(response.data);
     return response.data;
+
 })
-
-.catch((err) => console.log(err))
-
-
-const createUser = (user) => {
-    axios.post('https://reqres.in/api/users', user, {
+.post('https://reqres.in/api/users', responseData, {
         headers: {
             'Content-Type': 'application/json'
         }})
@@ -69,5 +65,26 @@ const createUser = (user) => {
             console.log(`POST: user is added`, addedUser);
             
         })
-        .catch(error => console.error(error));
-};
+.catch((err) => console.log(err))
+
+
+// const createUser = (user) => {
+//     axios.post('https://reqres.in/api/users', user, {
+//         headers: {
+//             'Content-Type': 'application/json'
+//         }})
+//         .then(response => {
+//             const addedUser = response.data;
+//             console.log(`POST: user is added`, addedUser);
+            
+//         })
+//         .catch(error => console.error(error));
+// };
+
+
+
+// // a and b are object elements of your array
+// function mycomparator(a,b) {
+//     return parseInt(a.price, 10) - parseInt(b.price, 10);
+//   }
+//   homes.sort(mycomparator)

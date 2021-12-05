@@ -29,20 +29,12 @@
             display: flex;
             flex-wrap: wrap;
         }
-        @include desktop {
-            width: 80%;
-            display: flex;
-            flex-wrap: wrap;
-        }
     }
 
     &__title {
         @include tablet {
             padding-right: 3rem;
             
-        }
-        @include desktop {
-            padding-right: 3rem;
         }
     }
 
@@ -54,12 +46,6 @@
 
         @include tablet {
             
-            width: 7.5rem;
-            align-self: center;
-        }
-
-        @include desktop {
-                      
             width: 7.5rem;
             align-self: center;
         }
@@ -101,7 +87,7 @@
     }
 
     &__address {
-        font-family: avenir;
+        font-family: "avenir";
         font-weight: 400;
         font-size: .8125rem;
     }

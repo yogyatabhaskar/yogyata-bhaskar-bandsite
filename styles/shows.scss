@@ -113,11 +113,6 @@
             align-items: center;
             justify-content: space-between;
          }
-         @include desktop {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-         }
     }
 
    
@@ -130,20 +125,12 @@
         @include tablet {
             display: none;
          }
-         @include desktop {
-           display: none;
-        }
     }
 
     &__content1{
         display: none;
 
         @include tablet {
-            display: flex;
-            height: 1rem;
-            width: 75%;
-         }
-         @include desktop {
             display: flex;
             height: 1rem;
             width: 75%;
@@ -160,9 +147,6 @@
             padding-left: 4rem;
          }
          @include desktop {
-            display: flex;
-            color: $color-tertiary;
-            width: 33%;
             padding-left: 5rem;
          }
          
@@ -175,14 +159,6 @@
         margin-top: 0;
         padding-left: 2rem;
         color: $color-quaternary;
-
-        @include tablet {
-            
-            
-         }
-         @include desktop {
-           
-         }
     }
         
    

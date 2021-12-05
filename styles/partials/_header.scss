@@ -29,7 +29,7 @@
         @include tablet {
             width: 9.5rem;
             
-         }
+        }
        
     }
 
@@ -84,7 +84,6 @@
             flex: 0;
         }
         @include desktop{
-            padding: 2rem 0;
             margin-left: 2rem;
         }
 
