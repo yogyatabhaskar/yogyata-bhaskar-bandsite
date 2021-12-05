@@ -20,7 +20,9 @@ const addComments = (responseData) => {
 
         const date = document.createElement('p');
         date.classList.add('view__date');
-        date.innerText = new Date(parseInt(comment2.timestamp));
+        const date1 = new Date(parseInt(comment2.timestamp));
+        date.innerText = date1.toLocaleDateString();
+        
         commentContent.appendChild(date);
 
         const remarks = document.createElement('p');
@@ -29,39 +31,44 @@ const addComments = (responseData) => {
         commentContent.appendChild(remarks);
     });
 }
-const form = document.querySelector('.comment-form');
 
+const today = new Date();   
+const date12 =today.toLocaleDateString();
+console.log(date12);
+
+const form = document.querySelector('.comment-form');
 const formEvent = form.addEventListener('submit', event => {
     event.preventDefault();
-
+    
     const fullname = document.querySelector('#fullName').value;
-    // date1,
+    const currentDate = date12
     const commentSec = document.querySelector('#commentsec').value;
 
-    const user = { fullname, commentSec };
+    const user = { fullname, currentDate, commentSec };
     //createUser(user);
     console.log(user);
     
 });
 
-const today = new Date();   
-const date1 =today.getFullYear()+'/'+(today.getMonth()+1)+'/'+today.getDate();
-console.log(date1);
 
+function compare(a, b) {
+    return b.timestamp - a.timestamp;
+}
+
+const sortArray = addComments[''];
 axios
 .get('https://project-1-api.herokuapp.com/comments?api_key=d67fc7e7-0b23-4412-b210-2a0744180a')
 .then(response => {
     console.log(response.data);
     addComments(response.data);
-    //return response.data;
-    
-return axios.post('https://reqres.in/api/users', user, {
-        headers: {
-            'Content-Type': 'application/json'
-    }});
+   
+return axios.post('https://reqres.in/api/users', formEvent, {
+    headers: {
+        'Content-Type': 'application/json'
+}});
 })
-.then(response => {
-    const addedUser = response.data;
+.then(responseData => {
+    const addedUser = responseData.data;
     console.log(`POST: user is added`, addedUser);
 })
 .catch((err) => console.log(err));
