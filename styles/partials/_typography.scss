@@ -11,36 +11,36 @@
 
 h1{
     font-family: 'avenir';
-    font-size: 3.0rem;
-    line-height: 4rem; 
+    font-size: 2rem;
+    line-height: 2rem; 
     font-weight: 700;
 
     @include tablet {
-        font-size: 4rem;
+        font-size: 3.75rem;
         line-height: 4.25rem;
     }
 }
 
 h2{
-    font-family: avenir;
-    font-size: 3.0rem;
+    font-family: 'avenir';
+    font-size: 2.0rem;
     line-height: 2rem;
     font-weight: 700;
 
     @include tablet {
-        font-size: 3rem;
+        font-size: 2.25rem;
         line-height: 2.75rem;
     }
 }
 
 h3{
     font-family: 'avenir';
-    font-size: 1.5rem;
+    font-size: 1rem;
     line-height: 1.375rem;
     font-weight: 600;
 
     @include tablet {
-        font-size: 2.5rem;
+        font-size: 1.5rem;
         line-height: 2rem;
     }
    
@@ -64,10 +64,11 @@ h4 {
 
 a {
     font-family: 'avenir';
-    font-size: 2rem;
-    line-height: 1.375rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
     @include tablet {
-        font-size: 1.5rem;
+        font-size: 1rem;
         line-height: 2rem;
     }
     
@@ -76,12 +77,12 @@ a {
 
 p {
     font-family: 'avenir';
-    font-size: 1.15rem;
+    font-size: .875rem;
     line-height: 1.25rem;
     font-weight: 400;
     @include tablet {
-        font-size: 1.5rem;
-        line-height: 1.375rem;
+        font-size: .875rem;
+        line-height: 1.5rem;
     }
 }
 

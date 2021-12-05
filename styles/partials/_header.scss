@@ -14,12 +14,12 @@
     
     @include tablet{
         flex-direction: row;
-        padding: 1rem 0 0 2rem;
+        padding: 0 2rem;
        
     }
     @include desktop{
         flex-direction: row;
-        padding: 1rem 3rem 0 8rem;
+        padding: 0 3rem 0 8rem;
     }
 
     &__logoimg{
@@ -55,6 +55,7 @@
         @include tablet{
             justify-content: flex-start;
             flex: 0;
+            padding: 0;
         }
        
     }
@@ -72,7 +73,7 @@
     &__link {
         text-decoration: none;
         color: $color-quinary;
-        padding: 1rem;
+        padding: 0 1rem 1rem 1rem;
         display: flex;
         flex: 1;
         justify-content: center;

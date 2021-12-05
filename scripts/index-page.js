@@ -53,19 +53,18 @@ axios
 .then(response => {
     console.log(response.data);
     addComments(response.data);
-    return response.data;
-
-})
-.post('https://reqres.in/api/users', responseData, {
+    //return response.data;
+    
+return axios.post('https://reqres.in/api/users', user, {
         headers: {
             'Content-Type': 'application/json'
-        }})
-        .then(response => {
-            const addedUser = response.data;
-            console.log(`POST: user is added`, addedUser);
-            
-        })
-.catch((err) => console.log(err))
+    }});
+})
+.then(response => {
+    const addedUser = response.data;
+    console.log(`POST: user is added`, addedUser);
+})
+.catch((err) => console.log(err));
 
 
 // const createUser = (user) => {

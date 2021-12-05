@@ -13,45 +13,39 @@ body {
 }
 h1 {
   font-family: "avenir";
-  font-size: 3rem;
-  line-height: 4rem;
+  font-size: 2rem;
+  line-height: 2rem;
   font-weight: 700;
 }
 @media (min-width: 48rem) {
   h1 {
-    font-size: 4rem;
-    line-height: 4.25rem;
-  }
-}
-@media (min-width: 80rem) {
-  h1 {
-    font-size: 4.5rem;
+    font-size: 3.75rem;
     line-height: 4.25rem;
   }
 }
 
 h2 {
-  font-family: avenir;
-  font-size: 3rem;
+  font-family: "avenir";
+  font-size: 2rem;
   line-height: 2rem;
   font-weight: 700;
 }
 @media (min-width: 48rem) {
   h2 {
-    font-size: 3rem;
+    font-size: 2.25rem;
     line-height: 2.75rem;
   }
 }
 
 h3 {
   font-family: "avenir";
-  font-size: 1.5rem;
+  font-size: 1rem;
   line-height: 1.375rem;
   font-weight: 600;
 }
 @media (min-width: 48rem) {
   h3 {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     line-height: 2rem;
   }
 }
@@ -77,26 +71,27 @@ h4 {
 
 a {
   font-family: "avenir";
-  font-size: 2rem;
-  line-height: 1.375rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
 }
 @media (min-width: 48rem) {
   a {
-    font-size: 1.5rem;
+    font-size: 1rem;
     line-height: 2rem;
   }
 }
 
 p {
   font-family: "avenir";
-  font-size: 1.15rem;
+  font-size: 0.875rem;
   line-height: 1.25rem;
   font-weight: 400;
 }
 @media (min-width: 48rem) {
   p {
-    font-size: 1.5rem;
-    line-height: 1.375rem;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -128,19 +123,7 @@ p {
     flex-wrap: wrap;
   }
 }
-@media (min-width: 80rem) {
-  .footer__info {
-    width: 80%;
-    display: flex;
-    flex-wrap: wrap;
-  }
-}
 @media (min-width: 48rem) {
-  .footer__title {
-    padding-right: 3rem;
-  }
-}
-@media (min-width: 80rem) {
   .footer__title {
     padding-right: 3rem;
   }
@@ -152,12 +135,6 @@ p {
   width: 7.5rem;
 }
 @media (min-width: 48rem) {
-  .footer__social {
-    width: 7.5rem;
-    align-self: center;
-  }
-}
-@media (min-width: 80rem) {
   .footer__social {
     width: 7.5rem;
     align-self: center;
@@ -197,7 +174,7 @@ p {
   min-width: 0;
 }
 .footer__address {
-  font-family: avenir;
+  font-family: "avenir";
   font-weight: 400;
   font-size: 0.8125rem;
 }
@@ -228,13 +205,13 @@ p {
 @media (min-width: 48rem) {
   .header {
     flex-direction: row;
-    padding: 1rem 0 0 2rem;
+    padding: 0 2rem;
   }
 }
 @media (min-width: 80rem) {
   .header {
     flex-direction: row;
-    padding: 1rem 3rem 0 8rem;
+    padding: 0 3rem 0 8rem;
   }
 }
 .header__logoimg {
@@ -268,6 +245,7 @@ p {
   .header__navlist {
     justify-content: flex-start;
     flex: 0;
+    padding: 0;
   }
 }
 .header__items {
@@ -283,7 +261,7 @@ p {
 .header__link {
   text-decoration: none;
   color: #E1E1E1;
-  padding: 1rem;
+  padding: 0 1rem 1rem 1rem;
   display: flex;
   flex: 1;
   justify-content: center;
@@ -297,7 +275,6 @@ p {
 }
 @media (min-width: 80rem) {
   .header__link {
-    padding: 2rem 0;
     margin-left: 2rem;
   }
 }
@@ -423,13 +400,6 @@ p {
     justify-content: space-between;
   }
 }
-@media (min-width: 80rem) {
-  .card__content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-}
 .card__datehead, .card__venuehead, .card__locationhead {
   margin: 0;
   padding: 0 0 0.5rem 2rem;
@@ -440,22 +410,10 @@ p {
     display: none;
   }
 }
-@media (min-width: 80rem) {
-  .card__datehead, .card__venuehead, .card__locationhead {
-    display: none;
-  }
-}
 .card__content1 {
   display: none;
 }
 @media (min-width: 48rem) {
-  .card__content1 {
-    display: flex;
-    height: 1rem;
-    width: 75%;
-  }
-}
-@media (min-width: 80rem) {
   .card__content1 {
     display: flex;
     height: 1rem;
@@ -475,9 +433,6 @@ p {
 }
 @media (min-width: 80rem) {
   .card__datehead1, .card__venuehead1, .card__locationhead1 {
-    display: flex;
-    color: #AFAFAF;
-    width: 33%;
     padding-left: 5rem;
   }
 }
