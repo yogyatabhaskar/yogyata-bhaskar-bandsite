@@ -1,32 +1,3 @@
-const form = document.querySelector('.comment-form');
-
-// const today = new Date();   
-// const date1 =today.getFullYear()+'/'+(today.getMonth()+1)+'/'+today.getDate();
-// console.log(date);
-
-const formEvent = form.addEventListener('submit', event => {
-    event.preventDefault();
-
-    const fullname = document.querySelector('#fullName').value;
-    //const postedDate: date1,
-    const commentSec = document.querySelector('#commentsec').value;
-
-    const user = { fullname, commentSec };
-    createUser(user);
-
-    // const cardData = {
-    // onename: event.target.fullname.value,
-    // twoname: event.target.commentSec.value,
-    // };
-
-    // console.log(cardData);
-   
-});
-
-
-
-
-
 const addComments = (responseData) => {
     const usersListEL = document.querySelector("#view__area");
     usersListEL.innerHTML = ""
@@ -58,6 +29,20 @@ const addComments = (responseData) => {
         commentContent.appendChild(remarks);
     });
 }
+const form = document.querySelector('.comment-form');
+
+const formEvent = form.addEventListener('submit', event => {
+    event.preventDefault();
+
+    const fullname = document.querySelector('#fullName').textContent;
+    //const postedDate: date1,
+    const commentSec = document.querySelector('#commentsec').textContent;
+
+    const user = { fullname, commentSec };
+    createUser(user);
+    console.log(user);
+   
+});
 
 const today = new Date();   
 const date1 =today.getFullYear()+'/'+(today.getMonth()+1)+'/'+today.getDate();
@@ -73,13 +58,16 @@ axios
 
 .catch((err) => console.log(err))
 
+
 const createUser = (user) => {
-    axios.post('https://reqres.in/api/users', user)
+    axios.post('https://reqres.in/api/users', user, {
+        headers: {
+            'Content-Type': 'application/json'
+        }})
         .then(response => {
             const addedUser = response.data;
             console.log(`POST: user is added`, addedUser);
-            // append to DOM
-            // appendChild([addedUser]);
+            
         })
         .catch(error => console.error(error));
 };
