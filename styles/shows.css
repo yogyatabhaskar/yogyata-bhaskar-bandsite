@@ -374,6 +374,14 @@ p {
   display: flex;
   flex-direction: column;
 }
+@media (min-width: 80rem) {
+  .shows {
+    padding: 0 10rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+}
 .shows__heading {
   padding: 1rem 2rem;
   margin-bottom: 0;
@@ -398,6 +406,11 @@ p {
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+}
+@media (min-width: 80rem) {
+  .card {
+    flex-grow: 2;
   }
 }
 .card__datehead, .card__venuehead, .card__locationhead {
