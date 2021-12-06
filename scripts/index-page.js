@@ -36,46 +36,34 @@ const today = new Date();
 const date12 =today.toLocaleDateString();
 console.log(date12);
 
-const form = document.querySelector('.comment-form');
+const formEl = document.querySelector('.comment-form');
 
-const formEvent = form.addEventListener('submit', event => {
+function compare(a, b) {
+    return b.timestamp - a.timestamp;
+}
+
+const formEvent = formEl.addEventListener('submit', event => {
     event.preventDefault();
     
-    const name = event.target.fullName.value,
-    timestamp = date12
-    const comment = event.target.commentsec.value
-
-    const user = { name, timestamp, comment };
-    //createUser(user);
-    console.log(user);
+    const cardData = {
+        name: event.target.fullName.value,
+        timestamp: date12,
+        comment: event.target.commentsec.value
+        };
+  
+    console.log(cardData);
     
     axios
-    .post('https://project-1-api.herokuapp.com/comments?api_key=d67fc7e7-0b23-4412-b210-2a0744180a', user, {
-    headers: {
-        'Content-Type': 'application/json'
-}})
-
-.then(responseData => {
-    const addedUser = responseData.data;
-    console.log(`POST: user is added`, addedUser);
+    .post('https://project-1-api.herokuapp.com/comments?api_key=d67fc7e7-0b23-4412-b210-2a0744180a', cardData, 
+    {headers: {'Content-Type': 'application/json'}})
+    .then(responseData => {
+    const addedUser = responseData.data ;
+    console.log(addedUser);
 })
 .catch((err) => console.log(err));
 
 })
 
-
-const createUser = (user) => {
-    axios.post('https://reqres.in/api/users', user, {
-        headers: {
-            'Content-Type': 'application/json'
-        }})
-        .then(response => {
-            const addedUser = response.data;
-            console.log(`POST: user is added`, addedUser);
-            
-        })
-        .catch(error => console.error(error));
-};
 axios
 .get('https://project-1-api.herokuapp.com/comments?api_key=d67fc7e7-0b23-4412-b210-2a0744180a')
 .then(response => {
@@ -89,10 +77,6 @@ return addComments;
 
 
 
-
-// function compare(a, b) {
-//     return b.timestamp - a.timestamp;
-// }
 
 
 // return axios.post('https://project-1-api.herokuapp.com/comments?api_key=d67fc7e7-0b23-4412-b210-2a0744180a', formEvent, {

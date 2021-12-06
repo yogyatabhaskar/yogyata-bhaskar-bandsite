@@ -214,6 +214,9 @@ p {
     padding: 0 3rem 0 8rem;
   }
 }
+.header__logolink {
+  padding: 2rem 0;
+}
 .header__logoimg {
   height: 2.25rem;
   width: 12.5rem;

@@ -37,8 +37,7 @@
         z-index: 1;
 
         @include tablet {
-            margin: 0;
-            padding-left: 2rem;
+            padding-left: 3rem;
         }
         @include desktop {
             padding-left: 8rem;   
@@ -52,11 +51,15 @@
     background-color: $color-secondary;
 
     &__title{
-        padding: 2rem 1rem 1rem 1rem;
-        margin: 0;
+        padding: 2rem 1rem 0 1rem;
+        margin-top: 1rem;
 
         @include tablet{
             padding: 2.5rem 3.5rem 0 3.5rem;
+        }
+
+        @include desktop {
+            padding: 2.5rem 3.5rem 0 3.5rem;   
         }
     }
 }
@@ -90,17 +93,16 @@
     } 
 
     &__words {
-        //font-size: 1.5rem;
-        
+        font-size: 1.5rem;
         padding: 1rem;
         margin: 0;
 
         @include tablet {
-             padding: 1rem 3rem 0 3rem;
+             padding: 1rem 3rem;
         }
 
         @include desktop{
-            padding: 1rem 4rem 0 4rem;
+            padding: 1rem 4rem;
         }
     }
 
@@ -109,46 +111,37 @@
         margin: 0;
         @include tablet {
             font-size: .875rem;
-            padding: 0 3rem 1rem 3rem;
+            padding: 0 3rem;
        }
 
        @include desktop{
-           padding: 0 4rem 1rem 4rem;
+           font-size: .875rem;
+           padding: 0 4rem;
        }
     }
 
     &__bandname{
-        padding: 1rem 1rem 0 1rem;
+        padding: 0 1rem;
         margin: 1rem 0 0 0;
-        @include tablet {
-            padding: 0 3rem 0 3rem;
-       }
-
-       @include desktop{
-           padding: 0 4rem 0 4rem;
-       }
     }
 
     &__para{
-        padding: 0 1rem;
         @include tablet{
             display: flex;
-            padding: 0 2rem 1rem 3rem;
         }
         
-        @include desktop{
-            padding: 0 3rem 1rem 4rem;
-        }
 
     } 
 
     &__para1, &__para2 {
         margin: 0;
-        padding-top: 1rem;
+        padding: 1rem;
+        word-spacing: 0.3rem;
+        line-height: 1.5rem;
         @include tablet{
-        padding-right: 1rem;
-        margin: 0; 
+            font-size: .875rem;
         }
+       
     }
 
 }
@@ -163,6 +156,9 @@
         @include tablet {
             padding: 2.5rem 3.5rem 0 3.5rem;
         }
+        @include desktop {
+            padding: 2.5rem 3.5rem 0 3.5rem;
+        }
     }
 
     &__images{
@@ -170,6 +166,10 @@
         flex-direction: column;
 
         @include tablet {
+            flex-flow: row wrap;
+            padding: 2.5rem 3.5rem;
+        }
+        @include desktop {
             flex-flow: row wrap;
             padding: 2.5rem 3.5rem;
         }
@@ -185,6 +185,11 @@
             height: 20vh;
             
         }
+        @include desktop {
+            width: 33%;
+            height: 22vh;
+        }
+
         &:hover{
             filter: grayscale(0);
         }
@@ -201,10 +206,13 @@
         @include tablet {
             padding: 2.5rem 3.5rem 0 3.5rem;
         }
+        @include desktop {
+            padding: 2.5rem 3.5rem 0 3.5rem;
+        }
     }
 }
 
-.form {
+.commentpost {
     display: flex;
     padding: 1rem 0;
     margin: 0 2rem;
@@ -248,6 +256,8 @@
     flex-direction: column;
     flex-grow: 2;
    
+
+
     &__button {
         border: none;
         background-color: $color-primary;
@@ -263,10 +273,9 @@
         &:hover {
             background-color: $color-quaternary;
         }
-
         @include tablet {
-            width: 10rem;
             margin-left: auto;
+            width: 10rem;
         }
     }
 
@@ -306,6 +315,9 @@
 }
 
 .view {
+
+    
+
     &__content {
         padding: 1rem 2rem;
         display: flex;
