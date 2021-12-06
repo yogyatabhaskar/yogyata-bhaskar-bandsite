@@ -1,8 +1,8 @@
 
 function createButton(url) {
-    const link = document.createElement('a');
+    const link = document.createElement('div');
     link.classList.add('card__button');
-    link.setAttribute('href', url);
+    //link.setAttribute('href', url);
     link.innerText = 'BUY TICKETS';
     return link;
 }
@@ -10,6 +10,28 @@ function createButton(url) {
 const addShows = (responseData) => {
     const usersListEL = document.querySelector(".card");
     usersListEL.innerHTML = ""
+
+    const cardContent1 = document.createElement('div');
+    cardContent1.classList.add('card__content1');
+
+    const datehead1 = document.createElement('p');
+    datehead1.classList.add('card__datehead1');
+    datehead1.innerText = "DATE";
+    cardContent1.appendChild(datehead1);
+
+
+    const venuehead1 = document.createElement('p')
+    venuehead1.classList.add('card__venuehead1');
+    venuehead1.innerText = "VENUE";
+    cardContent1.appendChild(venuehead1);
+
+    const locationhead1 = document.createElement('p')
+    locationhead1.classList.add('card__locationhead1');
+    locationhead1.innerText = "LOCATION";
+    cardContent1.appendChild(locationhead1);
+
+    const concertEl1 = document.querySelector('.card');
+    concertEl1.appendChild(cardContent1);
 
     responseData.forEach(show => {
 

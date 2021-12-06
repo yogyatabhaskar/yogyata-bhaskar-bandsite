@@ -411,6 +411,10 @@ p {
 @media (min-width: 80rem) {
   .card {
     flex-grow: 2;
+    padding: 3rem;
+    display: flex;
+    flex-grow: 2;
+    flex-direction: column;
   }
 }
 .card__datehead, .card__venuehead, .card__locationhead {

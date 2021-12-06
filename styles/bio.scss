@@ -248,8 +248,6 @@
     flex-direction: column;
     flex-grow: 2;
    
-
-
     &__button {
         border: none;
         background-color: $color-primary;
@@ -264,6 +262,11 @@
 
         &:hover {
             background-color: $color-quaternary;
+        }
+
+        @include tablet {
+            width: 10rem;
+            margin-left: auto;
         }
     }
 
