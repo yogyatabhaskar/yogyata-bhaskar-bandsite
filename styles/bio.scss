@@ -242,8 +242,7 @@
             position: absolute;
             top: 10rem;
             left: 3rem;
-            
-            //transform: translateY(-50%);
+           
         }
     }
 
@@ -314,10 +313,52 @@
     }
 }
 
-.view {
+.comments {
+    &__content {
+        padding: 1rem 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        border-bottom: .0625rem solid $color-quinary;
+        @include tablet {
+            margin: 2rem 6rem;
+        }
+        @include desktop {
+            margin: 3rem 17rem;
+        }
+    }
 
+    &__heading {
+        display: flex;
+        align-items: center;
+    }
+    &__thumbnail {
+        width: 2.25rem;
+        height: 2.25rem;
+        border: 1px solid $color-quinary;
+        border-radius: 50%;
+        background-color: $color-quinary;
+        z-index: 2;
+    }
+
+    &__post {
+        flex-grow: 2;
+    }
+
+   
+    &__name {
+        padding-left: 1rem;
+    }
     
+    &__date {
+        margin-left: auto;
+    }
+    &__remarks {
+        line-height: 2rem;
+    } 
+}
 
+.view {
     &__content {
         padding: 1rem 2rem;
         display: flex;
@@ -348,9 +389,11 @@
     }
     &__remarks {
         line-height: 2rem;
-    }
-    
+    }   
 }
+
+
+
 
 
 

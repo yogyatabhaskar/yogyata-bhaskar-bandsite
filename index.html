@@ -81,12 +81,12 @@
                 <!--Form -->
                 <form class="comment-form">
                     <!-- Name input -->
-                    <label class="comment-form__name" for="fullName">NAME</label>
-                    <input type="text" name="fullName" class="comment-form__namebar" id="fullName" placeholder="Enter your name">    
+                    <label class="comment-form__name" for="name">NAME</label>
+                    <input type="text" name="name" class="comment-form__namebar" id="fullName" placeholder="Enter your name" required>    
             
                     <!-- Textarea -->
-                    <label class="comment-form__comment" for="commentsec">COMMENT</label>
-                    <textarea name="comments" id="commentsec" class="comment-form__commentbar" placeholder="Add a new comment"></textarea>
+                    <label class="comment-form__comment" for="comment">COMMENT</label>
+                    <textarea name="comment" id="commentsec" class="comment-form__commentbar" placeholder="Add a new comment" required></textarea>
             
                     <!-- Submit button -->
                     <button type="submit" class="comment-form__button">COMMENT</button>
@@ -185,7 +185,3 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="./scripts/index-page.js"></script>
 </html>
-
-<!--api_key.... {
-    "api_key": "d67fc7e7-0b23-4412-b210-2a0744180a84"
-    }-->

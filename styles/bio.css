@@ -601,6 +601,48 @@ p {
   border: 0.0625rem solid #323232;
 }
 
+.comments__content {
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-bottom: 0.0625rem solid #E1E1E1;
+}
+@media (min-width: 48rem) {
+  .comments__content {
+    margin: 2rem 6rem;
+  }
+}
+@media (min-width: 80rem) {
+  .comments__content {
+    margin: 3rem 17rem;
+  }
+}
+.comments__heading {
+  display: flex;
+  align-items: center;
+}
+.comments__thumbnail {
+  width: 2.25rem;
+  height: 2.25rem;
+  border: 1px solid #E1E1E1;
+  border-radius: 50%;
+  background-color: #E1E1E1;
+  z-index: 2;
+}
+.comments__post {
+  flex-grow: 2;
+}
+.comments__name {
+  padding-left: 1rem;
+}
+.comments__date {
+  margin-left: auto;
+}
+.comments__remarks {
+  line-height: 2rem;
+}
+
 .view__content {
   padding: 1rem 2rem;
   display: flex;
